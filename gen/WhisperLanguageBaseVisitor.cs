@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from ./TL.g4 by ANTLR 4.9.2
+// Generated from ../whisper-grammar/WhisperLanguage.g4 by ANTLR 4.9.2
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -25,7 +25,7 @@ using IToken = Antlr4.Runtime.IToken;
 using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 
 /// <summary>
-/// This class provides an empty implementation of <see cref="ITLVisitor{Result}"/>,
+/// This class provides an empty implementation of <see cref="IWhisperLanguageVisitor{Result}"/>,
 /// which can be extended to create a visitor which only needs to handle a subset
 /// of the available methods.
 /// </summary>
@@ -33,9 +33,9 @@ using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.9.2")]
 [System.Diagnostics.DebuggerNonUserCode]
 [System.CLSCompliant(false)]
-public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, ITLVisitor<Result> {
+public partial class WhisperLanguageBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, IWhisperLanguageVisitor<Result> {
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.parse"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.parse"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -43,9 +43,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitParse([NotNull] TLParser.ParseContext context) { return VisitChildren(context); }
+	public virtual Result VisitParse([NotNull] WhisperLanguageParser.ParseContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.block"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.block"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -53,9 +53,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBlock([NotNull] TLParser.BlockContext context) { return VisitChildren(context); }
+	public virtual Result VisitBlock([NotNull] WhisperLanguageParser.BlockContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.statement"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.statement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -63,9 +63,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitStatement([NotNull] TLParser.StatementContext context) { return VisitChildren(context); }
+	public virtual Result VisitStatement([NotNull] WhisperLanguageParser.StatementContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.assignment"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.assignment"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -73,10 +73,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAssignment([NotNull] TLParser.AssignmentContext context) { return VisitChildren(context); }
+	public virtual Result VisitAssignment([NotNull] WhisperLanguageParser.AssignmentContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>buildInIdentifierFunctionCall</c>
-	/// labeled alternative in <see cref="TLParser.functionCall"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.functionCall"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -84,10 +84,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBuildInIdentifierFunctionCall([NotNull] TLParser.BuildInIdentifierFunctionCallContext context) { return VisitChildren(context); }
+	public virtual Result VisitBuildInIdentifierFunctionCall([NotNull] WhisperLanguageParser.BuildInIdentifierFunctionCallContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>identifierFunctionCall</c>
-	/// labeled alternative in <see cref="TLParser.functionCall"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.functionCall"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -95,10 +95,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIdentifierFunctionCall([NotNull] TLParser.IdentifierFunctionCallContext context) { return VisitChildren(context); }
+	public virtual Result VisitIdentifierFunctionCall([NotNull] WhisperLanguageParser.IdentifierFunctionCallContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>printlnFunctionCall</c>
-	/// labeled alternative in <see cref="TLParser.functionCall"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.functionCall"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -106,10 +106,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitPrintlnFunctionCall([NotNull] TLParser.PrintlnFunctionCallContext context) { return VisitChildren(context); }
+	public virtual Result VisitPrintlnFunctionCall([NotNull] WhisperLanguageParser.PrintlnFunctionCallContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>printFunctionCall</c>
-	/// labeled alternative in <see cref="TLParser.functionCall"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.functionCall"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -117,10 +117,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitPrintFunctionCall([NotNull] TLParser.PrintFunctionCallContext context) { return VisitChildren(context); }
+	public virtual Result VisitPrintFunctionCall([NotNull] WhisperLanguageParser.PrintFunctionCallContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>assertFunctionCall</c>
-	/// labeled alternative in <see cref="TLParser.functionCall"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.functionCall"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -128,10 +128,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAssertFunctionCall([NotNull] TLParser.AssertFunctionCallContext context) { return VisitChildren(context); }
+	public virtual Result VisitAssertFunctionCall([NotNull] WhisperLanguageParser.AssertFunctionCallContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>sizeFunctionCall</c>
-	/// labeled alternative in <see cref="TLParser.functionCall"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.functionCall"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -139,9 +139,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitSizeFunctionCall([NotNull] TLParser.SizeFunctionCallContext context) { return VisitChildren(context); }
+	public virtual Result VisitSizeFunctionCall([NotNull] WhisperLanguageParser.SizeFunctionCallContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.ifStatement"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.ifStatement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -149,9 +149,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIfStatement([NotNull] TLParser.IfStatementContext context) { return VisitChildren(context); }
+	public virtual Result VisitIfStatement([NotNull] WhisperLanguageParser.IfStatementContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.ifStat"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.ifStat"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -159,9 +159,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIfStat([NotNull] TLParser.IfStatContext context) { return VisitChildren(context); }
+	public virtual Result VisitIfStat([NotNull] WhisperLanguageParser.IfStatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.elseIfStat"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.elseIfStat"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -169,9 +169,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitElseIfStat([NotNull] TLParser.ElseIfStatContext context) { return VisitChildren(context); }
+	public virtual Result VisitElseIfStat([NotNull] WhisperLanguageParser.ElseIfStatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.elseStat"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.elseStat"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -179,9 +179,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitElseStat([NotNull] TLParser.ElseStatContext context) { return VisitChildren(context); }
+	public virtual Result VisitElseStat([NotNull] WhisperLanguageParser.ElseStatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.functionDecl"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.functionDecl"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -189,9 +189,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFunctionDecl([NotNull] TLParser.FunctionDeclContext context) { return VisitChildren(context); }
+	public virtual Result VisitFunctionDecl([NotNull] WhisperLanguageParser.FunctionDeclContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.forStatement"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.forStatement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -199,9 +199,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitForStatement([NotNull] TLParser.ForStatementContext context) { return VisitChildren(context); }
+	public virtual Result VisitForStatement([NotNull] WhisperLanguageParser.ForStatementContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.whileStatement"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.whileStatement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -209,9 +209,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitWhileStatement([NotNull] TLParser.WhileStatementContext context) { return VisitChildren(context); }
+	public virtual Result VisitWhileStatement([NotNull] WhisperLanguageParser.WhileStatementContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.idList"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.idList"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -219,9 +219,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIdList([NotNull] TLParser.IdListContext context) { return VisitChildren(context); }
+	public virtual Result VisitIdList([NotNull] WhisperLanguageParser.IdListContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.exprList"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.exprList"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -229,10 +229,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitExprList([NotNull] TLParser.ExprListContext context) { return VisitChildren(context); }
+	public virtual Result VisitExprList([NotNull] WhisperLanguageParser.ExprListContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>boolExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -240,10 +240,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBoolExpression([NotNull] TLParser.BoolExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitBoolExpression([NotNull] WhisperLanguageParser.BoolExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>numberExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -251,10 +251,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNumberExpression([NotNull] TLParser.NumberExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitNumberExpression([NotNull] WhisperLanguageParser.NumberExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>identifierExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -262,10 +262,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIdentifierExpression([NotNull] TLParser.IdentifierExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitIdentifierExpression([NotNull] WhisperLanguageParser.IdentifierExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>notExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -273,10 +273,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNotExpression([NotNull] TLParser.NotExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitNotExpression([NotNull] WhisperLanguageParser.NotExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>orExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -284,10 +284,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOrExpression([NotNull] TLParser.OrExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitOrExpression([NotNull] WhisperLanguageParser.OrExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>unaryMinusExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -295,10 +295,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitUnaryMinusExpression([NotNull] TLParser.UnaryMinusExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitUnaryMinusExpression([NotNull] WhisperLanguageParser.UnaryMinusExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>powerExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -306,10 +306,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitPowerExpression([NotNull] TLParser.PowerExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitPowerExpression([NotNull] WhisperLanguageParser.PowerExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>eqExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -317,10 +317,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEqExpression([NotNull] TLParser.EqExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitEqExpression([NotNull] WhisperLanguageParser.EqExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>andExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -328,10 +328,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAndExpression([NotNull] TLParser.AndExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitAndExpression([NotNull] WhisperLanguageParser.AndExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>inExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -339,10 +339,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitInExpression([NotNull] TLParser.InExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitInExpression([NotNull] WhisperLanguageParser.InExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>stringExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -350,10 +350,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitStringExpression([NotNull] TLParser.StringExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitStringExpression([NotNull] WhisperLanguageParser.StringExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>expressionExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -361,10 +361,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitExpressionExpression([NotNull] TLParser.ExpressionExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitExpressionExpression([NotNull] WhisperLanguageParser.ExpressionExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>addExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -372,10 +372,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAddExpression([NotNull] TLParser.AddExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitAddExpression([NotNull] WhisperLanguageParser.AddExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>compExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -383,10 +383,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitCompExpression([NotNull] TLParser.CompExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitCompExpression([NotNull] WhisperLanguageParser.CompExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>nullExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -394,10 +394,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNullExpression([NotNull] TLParser.NullExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitNullExpression([NotNull] WhisperLanguageParser.NullExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>functionCallExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -405,10 +405,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFunctionCallExpression([NotNull] TLParser.FunctionCallExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitFunctionCallExpression([NotNull] WhisperLanguageParser.FunctionCallExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>multExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -416,10 +416,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitMultExpression([NotNull] TLParser.MultExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitMultExpression([NotNull] WhisperLanguageParser.MultExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>listExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -427,10 +427,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitListExpression([NotNull] TLParser.ListExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitListExpression([NotNull] WhisperLanguageParser.ListExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>ternaryExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -438,10 +438,10 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitTernaryExpression([NotNull] TLParser.TernaryExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitTernaryExpression([NotNull] WhisperLanguageParser.TernaryExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>inputExpression</c>
-	/// labeled alternative in <see cref="TLParser.expression"/>.
+	/// labeled alternative in <see cref="WhisperLanguageParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -449,9 +449,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitInputExpression([NotNull] TLParser.InputExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitInputExpression([NotNull] WhisperLanguageParser.InputExpressionContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.list"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.list_Alias"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -459,9 +459,9 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitList([NotNull] TLParser.ListContext context) { return VisitChildren(context); }
+	public virtual Result VisitList_Alias([NotNull] WhisperLanguageParser.List_AliasContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="TLParser.indexes"/>.
+	/// Visit a parse tree produced by <see cref="WhisperLanguageParser.indexes"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -469,5 +469,5 @@ public partial class TLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, I
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIndexes([NotNull] TLParser.IndexesContext context) { return VisitChildren(context); }
+	public virtual Result VisitIndexes([NotNull] WhisperLanguageParser.IndexesContext context) { return VisitChildren(context); }
 }

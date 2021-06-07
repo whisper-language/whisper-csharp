@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from ./TL.g4 by ANTLR 4.9.2
+// Generated from ../whisper-grammar/WhisperLanguage.g4 by ANTLR 4.9.2
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -32,43 +32,51 @@ using DFA = Antlr4.Runtime.Dfa.DFA;
 
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.9.2")]
 [System.CLSCompliant(false)]
-public partial class TLParser : Parser {
+public partial class WhisperLanguageParser : Parser {
 	protected static DFA[] decisionToDFA;
 	protected static PredictionContextCache sharedContextCache = new PredictionContextCache();
 	public const int
-		Println=1, Print=2, Input=3, Assert=4, Size=5, Def=6, If=7, Else=8, Return=9, 
-		For=10, While=11, To=12, Do=13, End=14, In=15, Null=16, Or=17, And=18, 
-		Equals=19, NEquals=20, GTEquals=21, LTEquals=22, Pow=23, Excl=24, GT=25, 
-		LT=26, Add=27, Subtract=28, Multiply=29, Divide=30, Modulus=31, OBrace=32, 
-		CBrace=33, OBracket=34, CBracket=35, OParen=36, CParen=37, SColon=38, 
-		Assign=39, Comma=40, QMark=41, Colon=42, Bool=43, Number=44, BuildIdentifier=45, 
-		Identifier=46, String=47, Comment=48, Space=49;
+		T__0=1, Println=2, Print=3, Input=4, Assert=5, Size=6, Def=7, If=8, Else=9, 
+		Return=10, For=11, While=12, To=13, Do=14, End=15, In=16, Null=17, LABEL_Alias=18, 
+		GOTO_Alias=19, JUMP_Alias=20, IMPORT_Alias=21, INCLUDE_Alias=22, Modulus_Alias=23, 
+		Class_Alias=24, INTERFACE_Alias=25, EXTEND_Alias=26, BitwiseAnd=27, BitwiseOr=28, 
+		BitwiseNot=29, BitwiseNegationOperator=30, LeftShiftOperator=31, RightShiftOperator=32, 
+		Or=33, And=34, Equals=35, NEquals=36, GTEquals=37, LTEquals=38, Excl=39, 
+		GT=40, LT=41, Add=42, Subtract=43, Multiply=44, Divide=45, Modulus=46, 
+		OBrace=47, CBrace=48, OBracket=49, CBracket=50, OParen=51, CParen=52, 
+		SColon=53, Assign=54, Comma=55, QMark=56, Colon=57, Bool=58, Number=59, 
+		BuildIdentifier=60, Identifier=61, String_Alias=62, Comment=63, Space=64;
 	public const int
 		RULE_parse = 0, RULE_block = 1, RULE_statement = 2, RULE_assignment = 3, 
 		RULE_functionCall = 4, RULE_ifStatement = 5, RULE_ifStat = 6, RULE_elseIfStat = 7, 
 		RULE_elseStat = 8, RULE_functionDecl = 9, RULE_forStatement = 10, RULE_whileStatement = 11, 
-		RULE_idList = 12, RULE_exprList = 13, RULE_expression = 14, RULE_list = 15, 
+		RULE_idList = 12, RULE_exprList = 13, RULE_expression = 14, RULE_list_Alias = 15, 
 		RULE_indexes = 16;
 	public static readonly string[] ruleNames = {
 		"parse", "block", "statement", "assignment", "functionCall", "ifStatement", 
 		"ifStat", "elseIfStat", "elseStat", "functionDecl", "forStatement", "whileStatement", 
-		"idList", "exprList", "expression", "list", "indexes"
+		"idList", "exprList", "expression", "list_Alias", "indexes"
 	};
 
 	private static readonly string[] _LiteralNames = {
-		null, "'println'", "'print'", "'input'", "'assert'", "'size'", "'func'", 
-		"'if'", "'else'", "'return'", "'for'", "'while'", "'to'", "'do'", "'end'", 
-		"'in'", "'null'", "'||'", "'&&'", "'=='", "'!='", "'>='", "'<='", "'^'", 
-		"'!'", "'>'", "'<'", "'+'", "'-'", "'*'", "'/'", "'%'", "'{'", "'}'", 
-		"'['", "']'", "'('", "')'", "';'", "'='", "','", "'?'", "':'"
+		null, "'**'", "'println'", "'print'", "'input'", "'assert'", "'size'", 
+		"'func'", "'if'", "'else'", "'return'", "'for'", "'while'", "'to'", "'do'", 
+		"'end'", "'in'", "'null'", "'label'", "'goto'", "'jump'", "'import'", 
+		"'include'", "'modulue'", "'class'", "'interface'", "'extend'", "'&'", 
+		"'|'", "'^'", "'~'", "'>>'", "'<<'", "'||'", "'&&'", "'=='", "'!='", "'>='", 
+		"'<='", "'!'", "'>'", "'<'", "'+'", "'-'", "'*'", "'/'", "'%'", "'{'", 
+		"'}'", "'['", "']'", "'('", "')'", "';'", "'='", "','", "'?'", "':'"
 	};
 	private static readonly string[] _SymbolicNames = {
-		null, "Println", "Print", "Input", "Assert", "Size", "Def", "If", "Else", 
-		"Return", "For", "While", "To", "Do", "End", "In", "Null", "Or", "And", 
-		"Equals", "NEquals", "GTEquals", "LTEquals", "Pow", "Excl", "GT", "LT", 
-		"Add", "Subtract", "Multiply", "Divide", "Modulus", "OBrace", "CBrace", 
+		null, null, "Println", "Print", "Input", "Assert", "Size", "Def", "If", 
+		"Else", "Return", "For", "While", "To", "Do", "End", "In", "Null", "LABEL_Alias", 
+		"GOTO_Alias", "JUMP_Alias", "IMPORT_Alias", "INCLUDE_Alias", "Modulus_Alias", 
+		"Class_Alias", "INTERFACE_Alias", "EXTEND_Alias", "BitwiseAnd", "BitwiseOr", 
+		"BitwiseNot", "BitwiseNegationOperator", "LeftShiftOperator", "RightShiftOperator", 
+		"Or", "And", "Equals", "NEquals", "GTEquals", "LTEquals", "Excl", "GT", 
+		"LT", "Add", "Subtract", "Multiply", "Divide", "Modulus", "OBrace", "CBrace", 
 		"OBracket", "CBracket", "OParen", "CParen", "SColon", "Assign", "Comma", 
-		"QMark", "Colon", "Bool", "Number", "BuildIdentifier", "Identifier", "String", 
+		"QMark", "Colon", "Bool", "Number", "BuildIdentifier", "Identifier", "String_Alias", 
 		"Comment", "Space"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
@@ -82,29 +90,29 @@ public partial class TLParser : Parser {
 		}
 	}
 
-	public override string GrammarFileName { get { return "TL.g4"; } }
+	public override string GrammarFileName { get { return "WhisperLanguage.g4"; } }
 
 	public override string[] RuleNames { get { return ruleNames; } }
 
 	public override string SerializedAtn { get { return new string(_serializedATN); } }
 
-	static TLParser() {
+	static WhisperLanguageParser() {
 		decisionToDFA = new DFA[_ATN.NumberOfDecisions];
 		for (int i = 0; i < _ATN.NumberOfDecisions; i++) {
 			decisionToDFA[i] = new DFA(_ATN.GetDecisionState(i), i);
 		}
 	}
 
-		public TLParser(ITokenStream input) : this(input, Console.Out, Console.Error) { }
+		public WhisperLanguageParser(ITokenStream input) : this(input, Console.Out, Console.Error) { }
 
-		public TLParser(ITokenStream input, TextWriter output, TextWriter errorOutput)
+		public WhisperLanguageParser(ITokenStream input, TextWriter output, TextWriter errorOutput)
 		: base(input, output, errorOutput)
 	{
 		Interpreter = new ParserATNSimulator(this, _ATN, decisionToDFA, sharedContextCache);
 	}
 
 	public partial class ParseContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Eof() { return GetToken(TLParser.Eof, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Eof() { return GetToken(WhisperLanguageParser.Eof, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
 			return GetRuleContext<BlockContext>(0);
 		}
@@ -117,18 +125,8 @@ public partial class TLParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_parse; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterParse(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitParse(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitParse(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -185,29 +183,19 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public FunctionDeclContext functionDecl(int i) {
 			return GetRuleContext<FunctionDeclContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Return() { return GetToken(TLParser.Return, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Return() { return GetToken(WhisperLanguageParser.Return, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SColon() { return GetToken(TLParser.SColon, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SColon() { return GetToken(WhisperLanguageParser.SColon, 0); }
 		public BlockContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_block; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterBlock(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitBlock(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBlock(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -288,7 +276,7 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public AssignmentContext assignment() {
 			return GetRuleContext<AssignmentContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SColon() { return GetToken(TLParser.SColon, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SColon() { return GetToken(WhisperLanguageParser.SColon, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public FunctionCallContext functionCall() {
 			return GetRuleContext<FunctionCallContext>(0);
 		}
@@ -307,18 +295,8 @@ public partial class TLParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_statement; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterStatement(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitStatement(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitStatement(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -385,8 +363,8 @@ public partial class TLParser : Parser {
 	}
 
 	public partial class AssignmentContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(TLParser.Identifier, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Assign() { return GetToken(TLParser.Assign, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(WhisperLanguageParser.Identifier, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Assign() { return GetToken(WhisperLanguageParser.Assign, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
@@ -399,18 +377,8 @@ public partial class TLParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_assignment; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterAssignment(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitAssignment(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAssignment(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -466,151 +434,91 @@ public partial class TLParser : Parser {
 		}
 	}
 	public partial class AssertFunctionCallContext : FunctionCallContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Assert() { return GetToken(TLParser.Assert, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(TLParser.OParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Assert() { return GetToken(WhisperLanguageParser.Assert, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(WhisperLanguageParser.OParen, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(TLParser.CParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(WhisperLanguageParser.CParen, 0); }
 		public AssertFunctionCallContext(FunctionCallContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterAssertFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitAssertFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAssertFunctionCall(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class SizeFunctionCallContext : FunctionCallContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Size() { return GetToken(TLParser.Size, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(TLParser.OParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Size() { return GetToken(WhisperLanguageParser.Size, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(WhisperLanguageParser.OParen, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(TLParser.CParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(WhisperLanguageParser.CParen, 0); }
 		public SizeFunctionCallContext(FunctionCallContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterSizeFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitSizeFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitSizeFunctionCall(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class PrintlnFunctionCallContext : FunctionCallContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Println() { return GetToken(TLParser.Println, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(TLParser.OParen, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(TLParser.CParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Println() { return GetToken(WhisperLanguageParser.Println, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(WhisperLanguageParser.OParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(WhisperLanguageParser.CParen, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
 		public PrintlnFunctionCallContext(FunctionCallContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterPrintlnFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitPrintlnFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPrintlnFunctionCall(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class BuildInIdentifierFunctionCallContext : FunctionCallContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BuildIdentifier() { return GetToken(TLParser.BuildIdentifier, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(TLParser.OParen, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(TLParser.CParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BuildIdentifier() { return GetToken(WhisperLanguageParser.BuildIdentifier, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(WhisperLanguageParser.OParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(WhisperLanguageParser.CParen, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExprListContext exprList() {
 			return GetRuleContext<ExprListContext>(0);
 		}
 		public BuildInIdentifierFunctionCallContext(FunctionCallContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterBuildInIdentifierFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitBuildInIdentifierFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBuildInIdentifierFunctionCall(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class IdentifierFunctionCallContext : FunctionCallContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(TLParser.Identifier, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(TLParser.OParen, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(TLParser.CParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(WhisperLanguageParser.Identifier, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(WhisperLanguageParser.OParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(WhisperLanguageParser.CParen, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExprListContext exprList() {
 			return GetRuleContext<ExprListContext>(0);
 		}
 		public IdentifierFunctionCallContext(FunctionCallContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterIdentifierFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitIdentifierFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIdentifierFunctionCall(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class PrintFunctionCallContext : FunctionCallContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Print() { return GetToken(TLParser.Print, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(TLParser.OParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Print() { return GetToken(WhisperLanguageParser.Print, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(WhisperLanguageParser.OParen, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(TLParser.CParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(WhisperLanguageParser.CParen, 0); }
 		public PrintFunctionCallContext(FunctionCallContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterPrintFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitPrintFunctionCall(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPrintFunctionCall(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -636,7 +544,7 @@ public partial class TLParser : Parser {
 				State = 74;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Input) | (1L << Assert) | (1L << Size) | (1L << Null) | (1L << Excl) | (1L << Subtract) | (1L << OBracket) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << BuildIdentifier) | (1L << Identifier) | (1L << String))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Input) | (1L << Assert) | (1L << Size) | (1L << Null) | (1L << Excl) | (1L << Subtract) | (1L << OBracket) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << BuildIdentifier) | (1L << Identifier) | (1L << String_Alias))) != 0)) {
 					{
 					State = 73;
 					exprList();
@@ -658,7 +566,7 @@ public partial class TLParser : Parser {
 				State = 80;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Input) | (1L << Assert) | (1L << Size) | (1L << Null) | (1L << Excl) | (1L << Subtract) | (1L << OBracket) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << BuildIdentifier) | (1L << Identifier) | (1L << String))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Input) | (1L << Assert) | (1L << Size) | (1L << Null) | (1L << Excl) | (1L << Subtract) | (1L << OBracket) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << BuildIdentifier) | (1L << Identifier) | (1L << String_Alias))) != 0)) {
 					{
 					State = 79;
 					exprList();
@@ -680,7 +588,7 @@ public partial class TLParser : Parser {
 				State = 86;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Input) | (1L << Assert) | (1L << Size) | (1L << Null) | (1L << Excl) | (1L << Subtract) | (1L << OBracket) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << BuildIdentifier) | (1L << Identifier) | (1L << String))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Input) | (1L << Assert) | (1L << Size) | (1L << Null) | (1L << Excl) | (1L << Subtract) | (1L << OBracket) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << BuildIdentifier) | (1L << Identifier) | (1L << String_Alias))) != 0)) {
 					{
 					State = 85;
 					expression(0);
@@ -767,18 +675,8 @@ public partial class TLParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_ifStatement; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterIfStatement(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitIfStatement(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIfStatement(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -835,33 +733,23 @@ public partial class TLParser : Parser {
 	}
 
 	public partial class IfStatContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode If() { return GetToken(TLParser.If, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode If() { return GetToken(WhisperLanguageParser.If, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(TLParser.OBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(WhisperLanguageParser.OBrace, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
 			return GetRuleContext<BlockContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(TLParser.CBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(WhisperLanguageParser.CBrace, 0); }
 		public IfStatContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_ifStat; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterIfStat(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitIfStat(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIfStat(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -898,34 +786,24 @@ public partial class TLParser : Parser {
 	}
 
 	public partial class ElseIfStatContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Else() { return GetToken(TLParser.Else, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode If() { return GetToken(TLParser.If, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Else() { return GetToken(WhisperLanguageParser.Else, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode If() { return GetToken(WhisperLanguageParser.If, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(TLParser.OBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(WhisperLanguageParser.OBrace, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
 			return GetRuleContext<BlockContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(TLParser.CBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(WhisperLanguageParser.CBrace, 0); }
 		public ElseIfStatContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_elseIfStat; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterElseIfStat(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitElseIfStat(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitElseIfStat(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -964,30 +842,20 @@ public partial class TLParser : Parser {
 	}
 
 	public partial class ElseStatContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Else() { return GetToken(TLParser.Else, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(TLParser.OBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Else() { return GetToken(WhisperLanguageParser.Else, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(WhisperLanguageParser.OBrace, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
 			return GetRuleContext<BlockContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(TLParser.CBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(WhisperLanguageParser.CBrace, 0); }
 		public ElseStatContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_elseStat; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterElseStat(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitElseStat(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitElseStat(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1022,15 +890,15 @@ public partial class TLParser : Parser {
 	}
 
 	public partial class FunctionDeclContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Def() { return GetToken(TLParser.Def, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(TLParser.Identifier, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(TLParser.OParen, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(TLParser.CParen, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(TLParser.OBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Def() { return GetToken(WhisperLanguageParser.Def, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(WhisperLanguageParser.Identifier, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(WhisperLanguageParser.OParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(WhisperLanguageParser.CParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(WhisperLanguageParser.OBrace, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
 			return GetRuleContext<BlockContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(TLParser.CBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(WhisperLanguageParser.CBrace, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public IdListContext idList() {
 			return GetRuleContext<IdListContext>(0);
 		}
@@ -1040,18 +908,8 @@ public partial class TLParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_functionDecl; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterFunctionDecl(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitFunctionDecl(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitFunctionDecl(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1103,39 +961,29 @@ public partial class TLParser : Parser {
 	}
 
 	public partial class ForStatementContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode For() { return GetToken(TLParser.For, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(TLParser.Identifier, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Assign() { return GetToken(TLParser.Assign, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode For() { return GetToken(WhisperLanguageParser.For, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(WhisperLanguageParser.Identifier, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Assign() { return GetToken(WhisperLanguageParser.Assign, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext[] expression() {
 			return GetRuleContexts<ExpressionContext>();
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode To() { return GetToken(TLParser.To, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(TLParser.OBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode To() { return GetToken(WhisperLanguageParser.To, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(WhisperLanguageParser.OBrace, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
 			return GetRuleContext<BlockContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(TLParser.CBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(WhisperLanguageParser.CBrace, 0); }
 		public ForStatementContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_forStatement; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterForStatement(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitForStatement(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitForStatement(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1180,33 +1028,23 @@ public partial class TLParser : Parser {
 	}
 
 	public partial class WhileStatementContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode While() { return GetToken(TLParser.While, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode While() { return GetToken(WhisperLanguageParser.While, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(TLParser.OBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBrace() { return GetToken(WhisperLanguageParser.OBrace, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
 			return GetRuleContext<BlockContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(TLParser.CBrace, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBrace() { return GetToken(WhisperLanguageParser.CBrace, 0); }
 		public WhileStatementContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_whileStatement; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterWhileStatement(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitWhileStatement(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitWhileStatement(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1243,13 +1081,13 @@ public partial class TLParser : Parser {
 	}
 
 	public partial class IdListContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Identifier() { return GetTokens(TLParser.Identifier); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Identifier() { return GetTokens(WhisperLanguageParser.Identifier); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier(int i) {
-			return GetToken(TLParser.Identifier, i);
+			return GetToken(WhisperLanguageParser.Identifier, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(TLParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(WhisperLanguageParser.Comma); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
-			return GetToken(TLParser.Comma, i);
+			return GetToken(WhisperLanguageParser.Comma, i);
 		}
 		public IdListContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1257,18 +1095,8 @@ public partial class TLParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_idList; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterIdList(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitIdList(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIdList(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1320,9 +1148,9 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(TLParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(WhisperLanguageParser.Comma); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
-			return GetToken(TLParser.Comma, i);
+			return GetToken(WhisperLanguageParser.Comma, i);
 		}
 		public ExprListContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1330,18 +1158,8 @@ public partial class TLParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_exprList; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterExprList(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitExprList(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitExprList(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1399,87 +1217,47 @@ public partial class TLParser : Parser {
 		}
 	}
 	public partial class BoolExpressionContext : ExpressionContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Bool() { return GetToken(TLParser.Bool, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Bool() { return GetToken(WhisperLanguageParser.Bool, 0); }
 		public BoolExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterBoolExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitBoolExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBoolExpression(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class NumberExpressionContext : ExpressionContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Number() { return GetToken(TLParser.Number, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Number() { return GetToken(WhisperLanguageParser.Number, 0); }
 		public NumberExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterNumberExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitNumberExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNumberExpression(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class IdentifierExpressionContext : ExpressionContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(TLParser.Identifier, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(WhisperLanguageParser.Identifier, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public IndexesContext indexes() {
 			return GetRuleContext<IndexesContext>(0);
 		}
 		public IdentifierExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterIdentifierExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitIdentifierExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIdentifierExpression(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class NotExpressionContext : ExpressionContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Excl() { return GetToken(TLParser.Excl, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Excl() { return GetToken(WhisperLanguageParser.Excl, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
 		public NotExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterNotExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitNotExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNotExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1491,44 +1269,24 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Or() { return GetToken(TLParser.Or, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Or() { return GetToken(WhisperLanguageParser.Or, 0); }
 		public OrExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterOrExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitOrExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitOrExpression(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class UnaryMinusExpressionContext : ExpressionContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Subtract() { return GetToken(TLParser.Subtract, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Subtract() { return GetToken(WhisperLanguageParser.Subtract, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
 		public UnaryMinusExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterUnaryMinusExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitUnaryMinusExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitUnaryMinusExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1540,21 +1298,10 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Pow() { return GetToken(TLParser.Pow, 0); }
 		public PowerExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterPowerExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitPowerExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPowerExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1567,22 +1314,12 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Equals() { return GetToken(TLParser.Equals, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NEquals() { return GetToken(TLParser.NEquals, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Equals() { return GetToken(WhisperLanguageParser.Equals, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NEquals() { return GetToken(WhisperLanguageParser.NEquals, 0); }
 		public EqExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterEqExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitEqExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEqExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1594,21 +1331,11 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode And() { return GetToken(TLParser.And, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode And() { return GetToken(WhisperLanguageParser.And, 0); }
 		public AndExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterAndExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitAndExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAndExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1620,71 +1347,41 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode In() { return GetToken(TLParser.In, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode In() { return GetToken(WhisperLanguageParser.In, 0); }
 		public InExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterInExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitInExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitInExpression(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class StringExpressionContext : ExpressionContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode String() { return GetToken(TLParser.String, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode String_Alias() { return GetToken(WhisperLanguageParser.String_Alias, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public IndexesContext indexes() {
 			return GetRuleContext<IndexesContext>(0);
 		}
 		public StringExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterStringExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitStringExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitStringExpression(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class ExpressionExpressionContext : ExpressionContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(TLParser.OParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(WhisperLanguageParser.OParen, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
 			return GetRuleContext<ExpressionContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(TLParser.CParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(WhisperLanguageParser.CParen, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public IndexesContext indexes() {
 			return GetRuleContext<IndexesContext>(0);
 		}
 		public ExpressionExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterExpressionExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitExpressionExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitExpressionExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1697,22 +1394,12 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Add() { return GetToken(TLParser.Add, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Subtract() { return GetToken(TLParser.Subtract, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Add() { return GetToken(WhisperLanguageParser.Add, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Subtract() { return GetToken(WhisperLanguageParser.Subtract, 0); }
 		public AddExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterAddExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitAddExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAddExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1725,44 +1412,24 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GTEquals() { return GetToken(TLParser.GTEquals, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LTEquals() { return GetToken(TLParser.LTEquals, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GT() { return GetToken(TLParser.GT, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LT() { return GetToken(TLParser.LT, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GTEquals() { return GetToken(WhisperLanguageParser.GTEquals, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LTEquals() { return GetToken(WhisperLanguageParser.LTEquals, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GT() { return GetToken(WhisperLanguageParser.GT, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LT() { return GetToken(WhisperLanguageParser.LT, 0); }
 		public CompExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterCompExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitCompExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitCompExpression(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class NullExpressionContext : ExpressionContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Null() { return GetToken(TLParser.Null, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Null() { return GetToken(WhisperLanguageParser.Null, 0); }
 		public NullExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterNullExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitNullExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNullExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1776,18 +1443,8 @@ public partial class TLParser : Parser {
 		}
 		public FunctionCallExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterFunctionCallExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitFunctionCallExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitFunctionCallExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1800,48 +1457,28 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Multiply() { return GetToken(TLParser.Multiply, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Divide() { return GetToken(TLParser.Divide, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Modulus() { return GetToken(TLParser.Modulus, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Multiply() { return GetToken(WhisperLanguageParser.Multiply, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Divide() { return GetToken(WhisperLanguageParser.Divide, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Modulus() { return GetToken(WhisperLanguageParser.Modulus, 0); }
 		public MultExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterMultExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitMultExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitMultExpression(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class ListExpressionContext : ExpressionContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ListContext list() {
-			return GetRuleContext<ListContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public List_AliasContext list_Alias() {
+			return GetRuleContext<List_AliasContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public IndexesContext indexes() {
 			return GetRuleContext<IndexesContext>(0);
 		}
 		public ListExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterListExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitListExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitListExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1853,45 +1490,25 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode QMark() { return GetToken(TLParser.QMark, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Colon() { return GetToken(TLParser.Colon, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode QMark() { return GetToken(WhisperLanguageParser.QMark, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Colon() { return GetToken(WhisperLanguageParser.Colon, 0); }
 		public TernaryExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterTernaryExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitTernaryExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitTernaryExpression(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class InputExpressionContext : ExpressionContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Input() { return GetToken(TLParser.Input, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(TLParser.OParen, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(TLParser.CParen, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode String() { return GetToken(TLParser.String, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Input() { return GetToken(WhisperLanguageParser.Input, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OParen() { return GetToken(WhisperLanguageParser.OParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CParen() { return GetToken(WhisperLanguageParser.CParen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode String_Alias() { return GetToken(WhisperLanguageParser.String_Alias, 0); }
 		public InputExpressionContext(ExpressionContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterInputExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitInputExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitInputExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1992,7 +1609,7 @@ public partial class TLParser : Parser {
 				Context = _localctx;
 				_prevctx = _localctx;
 				State = 189;
-				list();
+				list_Alias();
 				State = 191;
 				ErrorHandler.Sync(this);
 				switch ( Interpreter.AdaptivePredict(TokenStream,16,Context) ) {
@@ -2030,7 +1647,7 @@ public partial class TLParser : Parser {
 				Context = _localctx;
 				_prevctx = _localctx;
 				State = 197;
-				Match(String);
+				Match(String_Alias);
 				State = 199;
 				ErrorHandler.Sync(this);
 				switch ( Interpreter.AdaptivePredict(TokenStream,18,Context) ) {
@@ -2078,10 +1695,10 @@ public partial class TLParser : Parser {
 				State = 210;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if (_la==String) {
+				if (_la==String_Alias) {
 					{
 					State = 209;
-					Match(String);
+					Match(String_Alias);
 					}
 				}
 
@@ -2110,7 +1727,7 @@ public partial class TLParser : Parser {
 						State = 215;
 						if (!(Precpred(Context, 18))) throw new FailedPredicateException(this, "Precpred(Context, 18)");
 						State = 216;
-						Match(Pow);
+						Match(T__0);
 						State = 217;
 						expression(18);
 						}
@@ -2267,39 +1884,29 @@ public partial class TLParser : Parser {
 		return _localctx;
 	}
 
-	public partial class ListContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBracket() { return GetToken(TLParser.OBracket, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBracket() { return GetToken(TLParser.CBracket, 0); }
+	public partial class List_AliasContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBracket() { return GetToken(WhisperLanguageParser.OBracket, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBracket() { return GetToken(WhisperLanguageParser.CBracket, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExprListContext exprList() {
 			return GetRuleContext<ExprListContext>(0);
 		}
-		public ListContext(ParserRuleContext parent, int invokingState)
+		public List_AliasContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_list; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterList(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitList(this);
-		}
+		public override int RuleIndex { get { return RULE_list_Alias; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitList(this);
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitList_Alias(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 
 	[RuleVersion(0)]
-	public ListContext list() {
-		ListContext _localctx = new ListContext(Context, State);
-		EnterRule(_localctx, 30, RULE_list);
+	public List_AliasContext list_Alias() {
+		List_AliasContext _localctx = new List_AliasContext(Context, State);
+		EnterRule(_localctx, 30, RULE_list_Alias);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
@@ -2309,7 +1916,7 @@ public partial class TLParser : Parser {
 			State = 252;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Input) | (1L << Assert) | (1L << Size) | (1L << Null) | (1L << Excl) | (1L << Subtract) | (1L << OBracket) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << BuildIdentifier) | (1L << Identifier) | (1L << String))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Input) | (1L << Assert) | (1L << Size) | (1L << Null) | (1L << Excl) | (1L << Subtract) | (1L << OBracket) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << BuildIdentifier) | (1L << Identifier) | (1L << String_Alias))) != 0)) {
 				{
 				State = 251;
 				exprList();
@@ -2332,9 +1939,9 @@ public partial class TLParser : Parser {
 	}
 
 	public partial class IndexesContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] OBracket() { return GetTokens(TLParser.OBracket); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] OBracket() { return GetTokens(WhisperLanguageParser.OBracket); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OBracket(int i) {
-			return GetToken(TLParser.OBracket, i);
+			return GetToken(WhisperLanguageParser.OBracket, i);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext[] expression() {
 			return GetRuleContexts<ExpressionContext>();
@@ -2342,9 +1949,9 @@ public partial class TLParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] CBracket() { return GetTokens(TLParser.CBracket); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] CBracket() { return GetTokens(WhisperLanguageParser.CBracket); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CBracket(int i) {
-			return GetToken(TLParser.CBracket, i);
+			return GetToken(WhisperLanguageParser.CBracket, i);
 		}
 		public IndexesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -2352,18 +1959,8 @@ public partial class TLParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_indexes; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.EnterIndexes(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ITLListener typedListener = listener as ITLListener;
-			if (typedListener != null) typedListener.ExitIndexes(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ITLVisitor<TResult> typedVisitor = visitor as ITLVisitor<TResult>;
+			IWhisperLanguageVisitor<TResult> typedVisitor = visitor as IWhisperLanguageVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIndexes(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2437,7 +2034,7 @@ public partial class TLParser : Parser {
 
 	private static char[] _serializedATN = {
 		'\x3', '\x608B', '\xA72A', '\x8133', '\xB9ED', '\x417C', '\x3BE7', '\x7786', 
-		'\x5964', '\x3', '\x33', '\x10B', '\x4', '\x2', '\t', '\x2', '\x4', '\x3', 
+		'\x5964', '\x3', '\x42', '\x10B', '\x4', '\x2', '\t', '\x2', '\x4', '\x3', 
 		'\t', '\x3', '\x4', '\x4', '\t', '\x4', '\x4', '\x5', '\t', '\x5', '\x4', 
 		'\x6', '\t', '\x6', '\x4', '\a', '\t', '\a', '\x4', '\b', '\t', '\b', 
 		'\x4', '\t', '\t', '\t', '\x4', '\n', '\t', '\n', '\x4', '\v', '\t', '\v', 
@@ -2493,181 +2090,182 @@ public partial class TLParser : Parser {
 		'\n', '\x12', '\r', '\x12', '\xE', '\x12', '\x108', '\x3', '\x12', '\x2', 
 		'\x3', '\x1E', '\x13', '\x2', '\x4', '\x6', '\b', '\n', '\f', '\xE', '\x10', 
 		'\x12', '\x14', '\x16', '\x18', '\x1A', '\x1C', '\x1E', ' ', '\"', '\x2', 
-		'\x6', '\x3', '\x2', '\x1F', '!', '\x3', '\x2', '\x1D', '\x1E', '\x4', 
-		'\x2', '\x17', '\x18', '\x1B', '\x1C', '\x3', '\x2', '\x15', '\x16', '\x2', 
-		'\x12A', '\x2', '&', '\x3', '\x2', '\x2', '\x2', '\x4', '.', '\x3', '\x2', 
-		'\x2', '\x2', '\x6', '@', '\x3', '\x2', '\x2', '\x2', '\b', '\x42', '\x3', 
-		'\x2', '\x2', '\x2', '\n', 'j', '\x3', '\x2', '\x2', '\x2', '\f', 'l', 
-		'\x3', '\x2', '\x2', '\x2', '\xE', 'v', '\x3', '\x2', '\x2', '\x2', '\x10', 
-		'|', '\x3', '\x2', '\x2', '\x2', '\x12', '\x83', '\x3', '\x2', '\x2', 
-		'\x2', '\x14', '\x88', '\x3', '\x2', '\x2', '\x2', '\x16', '\x93', '\x3', 
-		'\x2', '\x2', '\x2', '\x18', '\x9D', '\x3', '\x2', '\x2', '\x2', '\x1A', 
-		'\xA3', '\x3', '\x2', '\x2', '\x2', '\x1C', '\xAB', '\x3', '\x2', '\x2', 
-		'\x2', '\x1E', '\xD7', '\x3', '\x2', '\x2', '\x2', ' ', '\xFC', '\x3', 
-		'\x2', '\x2', '\x2', '\"', '\x106', '\x3', '\x2', '\x2', '\x2', '$', '\'', 
-		'\x5', '\x4', '\x3', '\x2', '%', '\'', '\x5', '\x6', '\x4', '\x2', '&', 
-		'$', '\x3', '\x2', '\x2', '\x2', '&', '%', '\x3', '\x2', '\x2', '\x2', 
-		'\'', '(', '\x3', '\x2', '\x2', '\x2', '(', ')', '\a', '\x2', '\x2', '\x3', 
-		')', '\x3', '\x3', '\x2', '\x2', '\x2', '*', '-', '\x5', '\x6', '\x4', 
-		'\x2', '+', '-', '\x5', '\x14', '\v', '\x2', ',', '*', '\x3', '\x2', '\x2', 
-		'\x2', ',', '+', '\x3', '\x2', '\x2', '\x2', '-', '\x30', '\x3', '\x2', 
-		'\x2', '\x2', '.', ',', '\x3', '\x2', '\x2', '\x2', '.', '/', '\x3', '\x2', 
-		'\x2', '\x2', '/', '\x35', '\x3', '\x2', '\x2', '\x2', '\x30', '.', '\x3', 
-		'\x2', '\x2', '\x2', '\x31', '\x32', '\a', '\v', '\x2', '\x2', '\x32', 
-		'\x33', '\x5', '\x1E', '\x10', '\x2', '\x33', '\x34', '\a', '(', '\x2', 
-		'\x2', '\x34', '\x36', '\x3', '\x2', '\x2', '\x2', '\x35', '\x31', '\x3', 
-		'\x2', '\x2', '\x2', '\x35', '\x36', '\x3', '\x2', '\x2', '\x2', '\x36', 
-		'\x5', '\x3', '\x2', '\x2', '\x2', '\x37', '\x38', '\x5', '\b', '\x5', 
-		'\x2', '\x38', '\x39', '\a', '(', '\x2', '\x2', '\x39', '\x41', '\x3', 
-		'\x2', '\x2', '\x2', ':', ';', '\x5', '\n', '\x6', '\x2', ';', '<', '\a', 
-		'(', '\x2', '\x2', '<', '\x41', '\x3', '\x2', '\x2', '\x2', '=', '\x41', 
-		'\x5', '\f', '\a', '\x2', '>', '\x41', '\x5', '\x16', '\f', '\x2', '?', 
-		'\x41', '\x5', '\x18', '\r', '\x2', '@', '\x37', '\x3', '\x2', '\x2', 
-		'\x2', '@', ':', '\x3', '\x2', '\x2', '\x2', '@', '=', '\x3', '\x2', '\x2', 
-		'\x2', '@', '>', '\x3', '\x2', '\x2', '\x2', '@', '?', '\x3', '\x2', '\x2', 
-		'\x2', '\x41', '\a', '\x3', '\x2', '\x2', '\x2', '\x42', '\x44', '\a', 
-		'\x30', '\x2', '\x2', '\x43', '\x45', '\x5', '\"', '\x12', '\x2', '\x44', 
-		'\x43', '\x3', '\x2', '\x2', '\x2', '\x44', '\x45', '\x3', '\x2', '\x2', 
-		'\x2', '\x45', '\x46', '\x3', '\x2', '\x2', '\x2', '\x46', 'G', '\a', 
-		')', '\x2', '\x2', 'G', 'H', '\x5', '\x1E', '\x10', '\x2', 'H', '\t', 
-		'\x3', '\x2', '\x2', '\x2', 'I', 'J', '\a', '/', '\x2', '\x2', 'J', 'L', 
-		'\a', '&', '\x2', '\x2', 'K', 'M', '\x5', '\x1C', '\xF', '\x2', 'L', 'K', 
-		'\x3', '\x2', '\x2', '\x2', 'L', 'M', '\x3', '\x2', '\x2', '\x2', 'M', 
-		'N', '\x3', '\x2', '\x2', '\x2', 'N', 'k', '\a', '\'', '\x2', '\x2', 'O', 
-		'P', '\a', '\x30', '\x2', '\x2', 'P', 'R', '\a', '&', '\x2', '\x2', 'Q', 
-		'S', '\x5', '\x1C', '\xF', '\x2', 'R', 'Q', '\x3', '\x2', '\x2', '\x2', 
-		'R', 'S', '\x3', '\x2', '\x2', '\x2', 'S', 'T', '\x3', '\x2', '\x2', '\x2', 
-		'T', 'k', '\a', '\'', '\x2', '\x2', 'U', 'V', '\a', '\x3', '\x2', '\x2', 
-		'V', 'X', '\a', '&', '\x2', '\x2', 'W', 'Y', '\x5', '\x1E', '\x10', '\x2', 
-		'X', 'W', '\x3', '\x2', '\x2', '\x2', 'X', 'Y', '\x3', '\x2', '\x2', '\x2', 
-		'Y', 'Z', '\x3', '\x2', '\x2', '\x2', 'Z', 'k', '\a', '\'', '\x2', '\x2', 
-		'[', '\\', '\a', '\x4', '\x2', '\x2', '\\', ']', '\a', '&', '\x2', '\x2', 
-		']', '^', '\x5', '\x1E', '\x10', '\x2', '^', '_', '\a', '\'', '\x2', '\x2', 
-		'_', 'k', '\x3', '\x2', '\x2', '\x2', '`', '\x61', '\a', '\x6', '\x2', 
-		'\x2', '\x61', '\x62', '\a', '&', '\x2', '\x2', '\x62', '\x63', '\x5', 
-		'\x1E', '\x10', '\x2', '\x63', '\x64', '\a', '\'', '\x2', '\x2', '\x64', 
-		'k', '\x3', '\x2', '\x2', '\x2', '\x65', '\x66', '\a', '\a', '\x2', '\x2', 
-		'\x66', 'g', '\a', '&', '\x2', '\x2', 'g', 'h', '\x5', '\x1E', '\x10', 
-		'\x2', 'h', 'i', '\a', '\'', '\x2', '\x2', 'i', 'k', '\x3', '\x2', '\x2', 
-		'\x2', 'j', 'I', '\x3', '\x2', '\x2', '\x2', 'j', 'O', '\x3', '\x2', '\x2', 
-		'\x2', 'j', 'U', '\x3', '\x2', '\x2', '\x2', 'j', '[', '\x3', '\x2', '\x2', 
-		'\x2', 'j', '`', '\x3', '\x2', '\x2', '\x2', 'j', '\x65', '\x3', '\x2', 
-		'\x2', '\x2', 'k', '\v', '\x3', '\x2', '\x2', '\x2', 'l', 'p', '\x5', 
-		'\xE', '\b', '\x2', 'm', 'o', '\x5', '\x10', '\t', '\x2', 'n', 'm', '\x3', 
-		'\x2', '\x2', '\x2', 'o', 'r', '\x3', '\x2', '\x2', '\x2', 'p', 'n', '\x3', 
-		'\x2', '\x2', '\x2', 'p', 'q', '\x3', '\x2', '\x2', '\x2', 'q', 't', '\x3', 
-		'\x2', '\x2', '\x2', 'r', 'p', '\x3', '\x2', '\x2', '\x2', 's', 'u', '\x5', 
-		'\x12', '\n', '\x2', 't', 's', '\x3', '\x2', '\x2', '\x2', 't', 'u', '\x3', 
-		'\x2', '\x2', '\x2', 'u', '\r', '\x3', '\x2', '\x2', '\x2', 'v', 'w', 
-		'\a', '\t', '\x2', '\x2', 'w', 'x', '\x5', '\x1E', '\x10', '\x2', 'x', 
-		'y', '\a', '\"', '\x2', '\x2', 'y', 'z', '\x5', '\x4', '\x3', '\x2', 'z', 
-		'{', '\a', '#', '\x2', '\x2', '{', '\xF', '\x3', '\x2', '\x2', '\x2', 
-		'|', '}', '\a', '\n', '\x2', '\x2', '}', '~', '\a', '\t', '\x2', '\x2', 
-		'~', '\x7F', '\x5', '\x1E', '\x10', '\x2', '\x7F', '\x80', '\a', '\"', 
-		'\x2', '\x2', '\x80', '\x81', '\x5', '\x4', '\x3', '\x2', '\x81', '\x82', 
-		'\a', '#', '\x2', '\x2', '\x82', '\x11', '\x3', '\x2', '\x2', '\x2', '\x83', 
-		'\x84', '\a', '\n', '\x2', '\x2', '\x84', '\x85', '\a', '\"', '\x2', '\x2', 
-		'\x85', '\x86', '\x5', '\x4', '\x3', '\x2', '\x86', '\x87', '\a', '#', 
-		'\x2', '\x2', '\x87', '\x13', '\x3', '\x2', '\x2', '\x2', '\x88', '\x89', 
-		'\a', '\b', '\x2', '\x2', '\x89', '\x8A', '\a', '\x30', '\x2', '\x2', 
-		'\x8A', '\x8C', '\a', '&', '\x2', '\x2', '\x8B', '\x8D', '\x5', '\x1A', 
-		'\xE', '\x2', '\x8C', '\x8B', '\x3', '\x2', '\x2', '\x2', '\x8C', '\x8D', 
-		'\x3', '\x2', '\x2', '\x2', '\x8D', '\x8E', '\x3', '\x2', '\x2', '\x2', 
-		'\x8E', '\x8F', '\a', '\'', '\x2', '\x2', '\x8F', '\x90', '\a', '\"', 
-		'\x2', '\x2', '\x90', '\x91', '\x5', '\x4', '\x3', '\x2', '\x91', '\x92', 
-		'\a', '#', '\x2', '\x2', '\x92', '\x15', '\x3', '\x2', '\x2', '\x2', '\x93', 
-		'\x94', '\a', '\f', '\x2', '\x2', '\x94', '\x95', '\a', '\x30', '\x2', 
-		'\x2', '\x95', '\x96', '\a', ')', '\x2', '\x2', '\x96', '\x97', '\x5', 
-		'\x1E', '\x10', '\x2', '\x97', '\x98', '\a', '\xE', '\x2', '\x2', '\x98', 
-		'\x99', '\x5', '\x1E', '\x10', '\x2', '\x99', '\x9A', '\a', '\"', '\x2', 
-		'\x2', '\x9A', '\x9B', '\x5', '\x4', '\x3', '\x2', '\x9B', '\x9C', '\a', 
-		'#', '\x2', '\x2', '\x9C', '\x17', '\x3', '\x2', '\x2', '\x2', '\x9D', 
-		'\x9E', '\a', '\r', '\x2', '\x2', '\x9E', '\x9F', '\x5', '\x1E', '\x10', 
-		'\x2', '\x9F', '\xA0', '\a', '\"', '\x2', '\x2', '\xA0', '\xA1', '\x5', 
-		'\x4', '\x3', '\x2', '\xA1', '\xA2', '\a', '#', '\x2', '\x2', '\xA2', 
-		'\x19', '\x3', '\x2', '\x2', '\x2', '\xA3', '\xA8', '\a', '\x30', '\x2', 
-		'\x2', '\xA4', '\xA5', '\a', '*', '\x2', '\x2', '\xA5', '\xA7', '\a', 
-		'\x30', '\x2', '\x2', '\xA6', '\xA4', '\x3', '\x2', '\x2', '\x2', '\xA7', 
-		'\xAA', '\x3', '\x2', '\x2', '\x2', '\xA8', '\xA6', '\x3', '\x2', '\x2', 
-		'\x2', '\xA8', '\xA9', '\x3', '\x2', '\x2', '\x2', '\xA9', '\x1B', '\x3', 
-		'\x2', '\x2', '\x2', '\xAA', '\xA8', '\x3', '\x2', '\x2', '\x2', '\xAB', 
-		'\xB0', '\x5', '\x1E', '\x10', '\x2', '\xAC', '\xAD', '\a', '*', '\x2', 
-		'\x2', '\xAD', '\xAF', '\x5', '\x1E', '\x10', '\x2', '\xAE', '\xAC', '\x3', 
-		'\x2', '\x2', '\x2', '\xAF', '\xB2', '\x3', '\x2', '\x2', '\x2', '\xB0', 
-		'\xAE', '\x3', '\x2', '\x2', '\x2', '\xB0', '\xB1', '\x3', '\x2', '\x2', 
-		'\x2', '\xB1', '\x1D', '\x3', '\x2', '\x2', '\x2', '\xB2', '\xB0', '\x3', 
-		'\x2', '\x2', '\x2', '\xB3', '\xB4', '\b', '\x10', '\x1', '\x2', '\xB4', 
-		'\xB5', '\a', '\x1E', '\x2', '\x2', '\xB5', '\xD8', '\x5', '\x1E', '\x10', 
-		'\x16', '\xB6', '\xB7', '\a', '\x1A', '\x2', '\x2', '\xB7', '\xD8', '\x5', 
-		'\x1E', '\x10', '\x15', '\xB8', '\xD8', '\a', '.', '\x2', '\x2', '\xB9', 
-		'\xD8', '\a', '-', '\x2', '\x2', '\xBA', '\xD8', '\a', '\x12', '\x2', 
-		'\x2', '\xBB', '\xBD', '\x5', '\n', '\x6', '\x2', '\xBC', '\xBE', '\x5', 
-		'\"', '\x12', '\x2', '\xBD', '\xBC', '\x3', '\x2', '\x2', '\x2', '\xBD', 
-		'\xBE', '\x3', '\x2', '\x2', '\x2', '\xBE', '\xD8', '\x3', '\x2', '\x2', 
-		'\x2', '\xBF', '\xC1', '\x5', ' ', '\x11', '\x2', '\xC0', '\xC2', '\x5', 
-		'\"', '\x12', '\x2', '\xC1', '\xC0', '\x3', '\x2', '\x2', '\x2', '\xC1', 
-		'\xC2', '\x3', '\x2', '\x2', '\x2', '\xC2', '\xD8', '\x3', '\x2', '\x2', 
-		'\x2', '\xC3', '\xC5', '\a', '\x30', '\x2', '\x2', '\xC4', '\xC6', '\x5', 
-		'\"', '\x12', '\x2', '\xC5', '\xC4', '\x3', '\x2', '\x2', '\x2', '\xC5', 
-		'\xC6', '\x3', '\x2', '\x2', '\x2', '\xC6', '\xD8', '\x3', '\x2', '\x2', 
-		'\x2', '\xC7', '\xC9', '\a', '\x31', '\x2', '\x2', '\xC8', '\xCA', '\x5', 
-		'\"', '\x12', '\x2', '\xC9', '\xC8', '\x3', '\x2', '\x2', '\x2', '\xC9', 
-		'\xCA', '\x3', '\x2', '\x2', '\x2', '\xCA', '\xD8', '\x3', '\x2', '\x2', 
-		'\x2', '\xCB', '\xCC', '\a', '&', '\x2', '\x2', '\xCC', '\xCD', '\x5', 
-		'\x1E', '\x10', '\x2', '\xCD', '\xCF', '\a', '\'', '\x2', '\x2', '\xCE', 
-		'\xD0', '\x5', '\"', '\x12', '\x2', '\xCF', '\xCE', '\x3', '\x2', '\x2', 
-		'\x2', '\xCF', '\xD0', '\x3', '\x2', '\x2', '\x2', '\xD0', '\xD8', '\x3', 
-		'\x2', '\x2', '\x2', '\xD1', '\xD2', '\a', '\x5', '\x2', '\x2', '\xD2', 
-		'\xD4', '\a', '&', '\x2', '\x2', '\xD3', '\xD5', '\a', '\x31', '\x2', 
-		'\x2', '\xD4', '\xD3', '\x3', '\x2', '\x2', '\x2', '\xD4', '\xD5', '\x3', 
-		'\x2', '\x2', '\x2', '\xD5', '\xD6', '\x3', '\x2', '\x2', '\x2', '\xD6', 
-		'\xD8', '\a', '\'', '\x2', '\x2', '\xD7', '\xB3', '\x3', '\x2', '\x2', 
-		'\x2', '\xD7', '\xB6', '\x3', '\x2', '\x2', '\x2', '\xD7', '\xB8', '\x3', 
-		'\x2', '\x2', '\x2', '\xD7', '\xB9', '\x3', '\x2', '\x2', '\x2', '\xD7', 
-		'\xBA', '\x3', '\x2', '\x2', '\x2', '\xD7', '\xBB', '\x3', '\x2', '\x2', 
-		'\x2', '\xD7', '\xBF', '\x3', '\x2', '\x2', '\x2', '\xD7', '\xC3', '\x3', 
-		'\x2', '\x2', '\x2', '\xD7', '\xC7', '\x3', '\x2', '\x2', '\x2', '\xD7', 
-		'\xCB', '\x3', '\x2', '\x2', '\x2', '\xD7', '\xD1', '\x3', '\x2', '\x2', 
-		'\x2', '\xD8', '\xF9', '\x3', '\x2', '\x2', '\x2', '\xD9', '\xDA', '\f', 
-		'\x14', '\x2', '\x2', '\xDA', '\xDB', '\a', '\x19', '\x2', '\x2', '\xDB', 
-		'\xF8', '\x5', '\x1E', '\x10', '\x14', '\xDC', '\xDD', '\f', '\x13', '\x2', 
-		'\x2', '\xDD', '\xDE', '\t', '\x2', '\x2', '\x2', '\xDE', '\xF8', '\x5', 
-		'\x1E', '\x10', '\x14', '\xDF', '\xE0', '\f', '\x12', '\x2', '\x2', '\xE0', 
-		'\xE1', '\t', '\x3', '\x2', '\x2', '\xE1', '\xF8', '\x5', '\x1E', '\x10', 
-		'\x13', '\xE2', '\xE3', '\f', '\x11', '\x2', '\x2', '\xE3', '\xE4', '\t', 
-		'\x4', '\x2', '\x2', '\xE4', '\xF8', '\x5', '\x1E', '\x10', '\x12', '\xE5', 
-		'\xE6', '\f', '\x10', '\x2', '\x2', '\xE6', '\xE7', '\t', '\x5', '\x2', 
-		'\x2', '\xE7', '\xF8', '\x5', '\x1E', '\x10', '\x11', '\xE8', '\xE9', 
-		'\f', '\xF', '\x2', '\x2', '\xE9', '\xEA', '\a', '\x14', '\x2', '\x2', 
-		'\xEA', '\xF8', '\x5', '\x1E', '\x10', '\x10', '\xEB', '\xEC', '\f', '\xE', 
-		'\x2', '\x2', '\xEC', '\xED', '\a', '\x13', '\x2', '\x2', '\xED', '\xF8', 
-		'\x5', '\x1E', '\x10', '\xF', '\xEE', '\xEF', '\f', '\r', '\x2', '\x2', 
-		'\xEF', '\xF0', '\a', '+', '\x2', '\x2', '\xF0', '\xF1', '\x5', '\x1E', 
-		'\x10', '\x2', '\xF1', '\xF2', '\a', ',', '\x2', '\x2', '\xF2', '\xF3', 
-		'\x5', '\x1E', '\x10', '\xE', '\xF3', '\xF8', '\x3', '\x2', '\x2', '\x2', 
-		'\xF4', '\xF5', '\f', '\f', '\x2', '\x2', '\xF5', '\xF6', '\a', '\x11', 
-		'\x2', '\x2', '\xF6', '\xF8', '\x5', '\x1E', '\x10', '\r', '\xF7', '\xD9', 
-		'\x3', '\x2', '\x2', '\x2', '\xF7', '\xDC', '\x3', '\x2', '\x2', '\x2', 
-		'\xF7', '\xDF', '\x3', '\x2', '\x2', '\x2', '\xF7', '\xE2', '\x3', '\x2', 
-		'\x2', '\x2', '\xF7', '\xE5', '\x3', '\x2', '\x2', '\x2', '\xF7', '\xE8', 
-		'\x3', '\x2', '\x2', '\x2', '\xF7', '\xEB', '\x3', '\x2', '\x2', '\x2', 
-		'\xF7', '\xEE', '\x3', '\x2', '\x2', '\x2', '\xF7', '\xF4', '\x3', '\x2', 
-		'\x2', '\x2', '\xF8', '\xFB', '\x3', '\x2', '\x2', '\x2', '\xF9', '\xF7', 
-		'\x3', '\x2', '\x2', '\x2', '\xF9', '\xFA', '\x3', '\x2', '\x2', '\x2', 
-		'\xFA', '\x1F', '\x3', '\x2', '\x2', '\x2', '\xFB', '\xF9', '\x3', '\x2', 
-		'\x2', '\x2', '\xFC', '\xFE', '\a', '$', '\x2', '\x2', '\xFD', '\xFF', 
-		'\x5', '\x1C', '\xF', '\x2', '\xFE', '\xFD', '\x3', '\x2', '\x2', '\x2', 
-		'\xFE', '\xFF', '\x3', '\x2', '\x2', '\x2', '\xFF', '\x100', '\x3', '\x2', 
-		'\x2', '\x2', '\x100', '\x101', '\a', '%', '\x2', '\x2', '\x101', '!', 
-		'\x3', '\x2', '\x2', '\x2', '\x102', '\x103', '\a', '$', '\x2', '\x2', 
-		'\x103', '\x104', '\x5', '\x1E', '\x10', '\x2', '\x104', '\x105', '\a', 
-		'%', '\x2', '\x2', '\x105', '\x107', '\x3', '\x2', '\x2', '\x2', '\x106', 
-		'\x102', '\x3', '\x2', '\x2', '\x2', '\x107', '\x108', '\x3', '\x2', '\x2', 
-		'\x2', '\x108', '\x106', '\x3', '\x2', '\x2', '\x2', '\x108', '\x109', 
-		'\x3', '\x2', '\x2', '\x2', '\x109', '#', '\x3', '\x2', '\x2', '\x2', 
-		'\x1C', '&', ',', '.', '\x35', '@', '\x44', 'L', 'R', 'X', 'j', 'p', 't', 
-		'\x8C', '\xA8', '\xB0', '\xBD', '\xC1', '\xC5', '\xC9', '\xCF', '\xD4', 
-		'\xD7', '\xF7', '\xF9', '\xFE', '\x108',
+		'\x6', '\x3', '\x2', '.', '\x30', '\x3', '\x2', ',', '-', '\x4', '\x2', 
+		'\'', '(', '*', '+', '\x3', '\x2', '%', '&', '\x2', '\x12A', '\x2', '&', 
+		'\x3', '\x2', '\x2', '\x2', '\x4', '.', '\x3', '\x2', '\x2', '\x2', '\x6', 
+		'@', '\x3', '\x2', '\x2', '\x2', '\b', '\x42', '\x3', '\x2', '\x2', '\x2', 
+		'\n', 'j', '\x3', '\x2', '\x2', '\x2', '\f', 'l', '\x3', '\x2', '\x2', 
+		'\x2', '\xE', 'v', '\x3', '\x2', '\x2', '\x2', '\x10', '|', '\x3', '\x2', 
+		'\x2', '\x2', '\x12', '\x83', '\x3', '\x2', '\x2', '\x2', '\x14', '\x88', 
+		'\x3', '\x2', '\x2', '\x2', '\x16', '\x93', '\x3', '\x2', '\x2', '\x2', 
+		'\x18', '\x9D', '\x3', '\x2', '\x2', '\x2', '\x1A', '\xA3', '\x3', '\x2', 
+		'\x2', '\x2', '\x1C', '\xAB', '\x3', '\x2', '\x2', '\x2', '\x1E', '\xD7', 
+		'\x3', '\x2', '\x2', '\x2', ' ', '\xFC', '\x3', '\x2', '\x2', '\x2', '\"', 
+		'\x106', '\x3', '\x2', '\x2', '\x2', '$', '\'', '\x5', '\x4', '\x3', '\x2', 
+		'%', '\'', '\x5', '\x6', '\x4', '\x2', '&', '$', '\x3', '\x2', '\x2', 
+		'\x2', '&', '%', '\x3', '\x2', '\x2', '\x2', '\'', '(', '\x3', '\x2', 
+		'\x2', '\x2', '(', ')', '\a', '\x2', '\x2', '\x3', ')', '\x3', '\x3', 
+		'\x2', '\x2', '\x2', '*', '-', '\x5', '\x6', '\x4', '\x2', '+', '-', '\x5', 
+		'\x14', '\v', '\x2', ',', '*', '\x3', '\x2', '\x2', '\x2', ',', '+', '\x3', 
+		'\x2', '\x2', '\x2', '-', '\x30', '\x3', '\x2', '\x2', '\x2', '.', ',', 
+		'\x3', '\x2', '\x2', '\x2', '.', '/', '\x3', '\x2', '\x2', '\x2', '/', 
+		'\x35', '\x3', '\x2', '\x2', '\x2', '\x30', '.', '\x3', '\x2', '\x2', 
+		'\x2', '\x31', '\x32', '\a', '\f', '\x2', '\x2', '\x32', '\x33', '\x5', 
+		'\x1E', '\x10', '\x2', '\x33', '\x34', '\a', '\x37', '\x2', '\x2', '\x34', 
+		'\x36', '\x3', '\x2', '\x2', '\x2', '\x35', '\x31', '\x3', '\x2', '\x2', 
+		'\x2', '\x35', '\x36', '\x3', '\x2', '\x2', '\x2', '\x36', '\x5', '\x3', 
+		'\x2', '\x2', '\x2', '\x37', '\x38', '\x5', '\b', '\x5', '\x2', '\x38', 
+		'\x39', '\a', '\x37', '\x2', '\x2', '\x39', '\x41', '\x3', '\x2', '\x2', 
+		'\x2', ':', ';', '\x5', '\n', '\x6', '\x2', ';', '<', '\a', '\x37', '\x2', 
+		'\x2', '<', '\x41', '\x3', '\x2', '\x2', '\x2', '=', '\x41', '\x5', '\f', 
+		'\a', '\x2', '>', '\x41', '\x5', '\x16', '\f', '\x2', '?', '\x41', '\x5', 
+		'\x18', '\r', '\x2', '@', '\x37', '\x3', '\x2', '\x2', '\x2', '@', ':', 
+		'\x3', '\x2', '\x2', '\x2', '@', '=', '\x3', '\x2', '\x2', '\x2', '@', 
+		'>', '\x3', '\x2', '\x2', '\x2', '@', '?', '\x3', '\x2', '\x2', '\x2', 
+		'\x41', '\a', '\x3', '\x2', '\x2', '\x2', '\x42', '\x44', '\a', '?', '\x2', 
+		'\x2', '\x43', '\x45', '\x5', '\"', '\x12', '\x2', '\x44', '\x43', '\x3', 
+		'\x2', '\x2', '\x2', '\x44', '\x45', '\x3', '\x2', '\x2', '\x2', '\x45', 
+		'\x46', '\x3', '\x2', '\x2', '\x2', '\x46', 'G', '\a', '\x38', '\x2', 
+		'\x2', 'G', 'H', '\x5', '\x1E', '\x10', '\x2', 'H', '\t', '\x3', '\x2', 
+		'\x2', '\x2', 'I', 'J', '\a', '>', '\x2', '\x2', 'J', 'L', '\a', '\x35', 
+		'\x2', '\x2', 'K', 'M', '\x5', '\x1C', '\xF', '\x2', 'L', 'K', '\x3', 
+		'\x2', '\x2', '\x2', 'L', 'M', '\x3', '\x2', '\x2', '\x2', 'M', 'N', '\x3', 
+		'\x2', '\x2', '\x2', 'N', 'k', '\a', '\x36', '\x2', '\x2', 'O', 'P', '\a', 
+		'?', '\x2', '\x2', 'P', 'R', '\a', '\x35', '\x2', '\x2', 'Q', 'S', '\x5', 
+		'\x1C', '\xF', '\x2', 'R', 'Q', '\x3', '\x2', '\x2', '\x2', 'R', 'S', 
+		'\x3', '\x2', '\x2', '\x2', 'S', 'T', '\x3', '\x2', '\x2', '\x2', 'T', 
+		'k', '\a', '\x36', '\x2', '\x2', 'U', 'V', '\a', '\x4', '\x2', '\x2', 
+		'V', 'X', '\a', '\x35', '\x2', '\x2', 'W', 'Y', '\x5', '\x1E', '\x10', 
+		'\x2', 'X', 'W', '\x3', '\x2', '\x2', '\x2', 'X', 'Y', '\x3', '\x2', '\x2', 
+		'\x2', 'Y', 'Z', '\x3', '\x2', '\x2', '\x2', 'Z', 'k', '\a', '\x36', '\x2', 
+		'\x2', '[', '\\', '\a', '\x5', '\x2', '\x2', '\\', ']', '\a', '\x35', 
+		'\x2', '\x2', ']', '^', '\x5', '\x1E', '\x10', '\x2', '^', '_', '\a', 
+		'\x36', '\x2', '\x2', '_', 'k', '\x3', '\x2', '\x2', '\x2', '`', '\x61', 
+		'\a', '\a', '\x2', '\x2', '\x61', '\x62', '\a', '\x35', '\x2', '\x2', 
+		'\x62', '\x63', '\x5', '\x1E', '\x10', '\x2', '\x63', '\x64', '\a', '\x36', 
+		'\x2', '\x2', '\x64', 'k', '\x3', '\x2', '\x2', '\x2', '\x65', '\x66', 
+		'\a', '\b', '\x2', '\x2', '\x66', 'g', '\a', '\x35', '\x2', '\x2', 'g', 
+		'h', '\x5', '\x1E', '\x10', '\x2', 'h', 'i', '\a', '\x36', '\x2', '\x2', 
+		'i', 'k', '\x3', '\x2', '\x2', '\x2', 'j', 'I', '\x3', '\x2', '\x2', '\x2', 
+		'j', 'O', '\x3', '\x2', '\x2', '\x2', 'j', 'U', '\x3', '\x2', '\x2', '\x2', 
+		'j', '[', '\x3', '\x2', '\x2', '\x2', 'j', '`', '\x3', '\x2', '\x2', '\x2', 
+		'j', '\x65', '\x3', '\x2', '\x2', '\x2', 'k', '\v', '\x3', '\x2', '\x2', 
+		'\x2', 'l', 'p', '\x5', '\xE', '\b', '\x2', 'm', 'o', '\x5', '\x10', '\t', 
+		'\x2', 'n', 'm', '\x3', '\x2', '\x2', '\x2', 'o', 'r', '\x3', '\x2', '\x2', 
+		'\x2', 'p', 'n', '\x3', '\x2', '\x2', '\x2', 'p', 'q', '\x3', '\x2', '\x2', 
+		'\x2', 'q', 't', '\x3', '\x2', '\x2', '\x2', 'r', 'p', '\x3', '\x2', '\x2', 
+		'\x2', 's', 'u', '\x5', '\x12', '\n', '\x2', 't', 's', '\x3', '\x2', '\x2', 
+		'\x2', 't', 'u', '\x3', '\x2', '\x2', '\x2', 'u', '\r', '\x3', '\x2', 
+		'\x2', '\x2', 'v', 'w', '\a', '\n', '\x2', '\x2', 'w', 'x', '\x5', '\x1E', 
+		'\x10', '\x2', 'x', 'y', '\a', '\x31', '\x2', '\x2', 'y', 'z', '\x5', 
+		'\x4', '\x3', '\x2', 'z', '{', '\a', '\x32', '\x2', '\x2', '{', '\xF', 
+		'\x3', '\x2', '\x2', '\x2', '|', '}', '\a', '\v', '\x2', '\x2', '}', '~', 
+		'\a', '\n', '\x2', '\x2', '~', '\x7F', '\x5', '\x1E', '\x10', '\x2', '\x7F', 
+		'\x80', '\a', '\x31', '\x2', '\x2', '\x80', '\x81', '\x5', '\x4', '\x3', 
+		'\x2', '\x81', '\x82', '\a', '\x32', '\x2', '\x2', '\x82', '\x11', '\x3', 
+		'\x2', '\x2', '\x2', '\x83', '\x84', '\a', '\v', '\x2', '\x2', '\x84', 
+		'\x85', '\a', '\x31', '\x2', '\x2', '\x85', '\x86', '\x5', '\x4', '\x3', 
+		'\x2', '\x86', '\x87', '\a', '\x32', '\x2', '\x2', '\x87', '\x13', '\x3', 
+		'\x2', '\x2', '\x2', '\x88', '\x89', '\a', '\t', '\x2', '\x2', '\x89', 
+		'\x8A', '\a', '?', '\x2', '\x2', '\x8A', '\x8C', '\a', '\x35', '\x2', 
+		'\x2', '\x8B', '\x8D', '\x5', '\x1A', '\xE', '\x2', '\x8C', '\x8B', '\x3', 
+		'\x2', '\x2', '\x2', '\x8C', '\x8D', '\x3', '\x2', '\x2', '\x2', '\x8D', 
+		'\x8E', '\x3', '\x2', '\x2', '\x2', '\x8E', '\x8F', '\a', '\x36', '\x2', 
+		'\x2', '\x8F', '\x90', '\a', '\x31', '\x2', '\x2', '\x90', '\x91', '\x5', 
+		'\x4', '\x3', '\x2', '\x91', '\x92', '\a', '\x32', '\x2', '\x2', '\x92', 
+		'\x15', '\x3', '\x2', '\x2', '\x2', '\x93', '\x94', '\a', '\r', '\x2', 
+		'\x2', '\x94', '\x95', '\a', '?', '\x2', '\x2', '\x95', '\x96', '\a', 
+		'\x38', '\x2', '\x2', '\x96', '\x97', '\x5', '\x1E', '\x10', '\x2', '\x97', 
+		'\x98', '\a', '\xF', '\x2', '\x2', '\x98', '\x99', '\x5', '\x1E', '\x10', 
+		'\x2', '\x99', '\x9A', '\a', '\x31', '\x2', '\x2', '\x9A', '\x9B', '\x5', 
+		'\x4', '\x3', '\x2', '\x9B', '\x9C', '\a', '\x32', '\x2', '\x2', '\x9C', 
+		'\x17', '\x3', '\x2', '\x2', '\x2', '\x9D', '\x9E', '\a', '\xE', '\x2', 
+		'\x2', '\x9E', '\x9F', '\x5', '\x1E', '\x10', '\x2', '\x9F', '\xA0', '\a', 
+		'\x31', '\x2', '\x2', '\xA0', '\xA1', '\x5', '\x4', '\x3', '\x2', '\xA1', 
+		'\xA2', '\a', '\x32', '\x2', '\x2', '\xA2', '\x19', '\x3', '\x2', '\x2', 
+		'\x2', '\xA3', '\xA8', '\a', '?', '\x2', '\x2', '\xA4', '\xA5', '\a', 
+		'\x39', '\x2', '\x2', '\xA5', '\xA7', '\a', '?', '\x2', '\x2', '\xA6', 
+		'\xA4', '\x3', '\x2', '\x2', '\x2', '\xA7', '\xAA', '\x3', '\x2', '\x2', 
+		'\x2', '\xA8', '\xA6', '\x3', '\x2', '\x2', '\x2', '\xA8', '\xA9', '\x3', 
+		'\x2', '\x2', '\x2', '\xA9', '\x1B', '\x3', '\x2', '\x2', '\x2', '\xAA', 
+		'\xA8', '\x3', '\x2', '\x2', '\x2', '\xAB', '\xB0', '\x5', '\x1E', '\x10', 
+		'\x2', '\xAC', '\xAD', '\a', '\x39', '\x2', '\x2', '\xAD', '\xAF', '\x5', 
+		'\x1E', '\x10', '\x2', '\xAE', '\xAC', '\x3', '\x2', '\x2', '\x2', '\xAF', 
+		'\xB2', '\x3', '\x2', '\x2', '\x2', '\xB0', '\xAE', '\x3', '\x2', '\x2', 
+		'\x2', '\xB0', '\xB1', '\x3', '\x2', '\x2', '\x2', '\xB1', '\x1D', '\x3', 
+		'\x2', '\x2', '\x2', '\xB2', '\xB0', '\x3', '\x2', '\x2', '\x2', '\xB3', 
+		'\xB4', '\b', '\x10', '\x1', '\x2', '\xB4', '\xB5', '\a', '-', '\x2', 
+		'\x2', '\xB5', '\xD8', '\x5', '\x1E', '\x10', '\x16', '\xB6', '\xB7', 
+		'\a', ')', '\x2', '\x2', '\xB7', '\xD8', '\x5', '\x1E', '\x10', '\x15', 
+		'\xB8', '\xD8', '\a', '=', '\x2', '\x2', '\xB9', '\xD8', '\a', '<', '\x2', 
+		'\x2', '\xBA', '\xD8', '\a', '\x13', '\x2', '\x2', '\xBB', '\xBD', '\x5', 
+		'\n', '\x6', '\x2', '\xBC', '\xBE', '\x5', '\"', '\x12', '\x2', '\xBD', 
+		'\xBC', '\x3', '\x2', '\x2', '\x2', '\xBD', '\xBE', '\x3', '\x2', '\x2', 
+		'\x2', '\xBE', '\xD8', '\x3', '\x2', '\x2', '\x2', '\xBF', '\xC1', '\x5', 
+		' ', '\x11', '\x2', '\xC0', '\xC2', '\x5', '\"', '\x12', '\x2', '\xC1', 
+		'\xC0', '\x3', '\x2', '\x2', '\x2', '\xC1', '\xC2', '\x3', '\x2', '\x2', 
+		'\x2', '\xC2', '\xD8', '\x3', '\x2', '\x2', '\x2', '\xC3', '\xC5', '\a', 
+		'?', '\x2', '\x2', '\xC4', '\xC6', '\x5', '\"', '\x12', '\x2', '\xC5', 
+		'\xC4', '\x3', '\x2', '\x2', '\x2', '\xC5', '\xC6', '\x3', '\x2', '\x2', 
+		'\x2', '\xC6', '\xD8', '\x3', '\x2', '\x2', '\x2', '\xC7', '\xC9', '\a', 
+		'@', '\x2', '\x2', '\xC8', '\xCA', '\x5', '\"', '\x12', '\x2', '\xC9', 
+		'\xC8', '\x3', '\x2', '\x2', '\x2', '\xC9', '\xCA', '\x3', '\x2', '\x2', 
+		'\x2', '\xCA', '\xD8', '\x3', '\x2', '\x2', '\x2', '\xCB', '\xCC', '\a', 
+		'\x35', '\x2', '\x2', '\xCC', '\xCD', '\x5', '\x1E', '\x10', '\x2', '\xCD', 
+		'\xCF', '\a', '\x36', '\x2', '\x2', '\xCE', '\xD0', '\x5', '\"', '\x12', 
+		'\x2', '\xCF', '\xCE', '\x3', '\x2', '\x2', '\x2', '\xCF', '\xD0', '\x3', 
+		'\x2', '\x2', '\x2', '\xD0', '\xD8', '\x3', '\x2', '\x2', '\x2', '\xD1', 
+		'\xD2', '\a', '\x6', '\x2', '\x2', '\xD2', '\xD4', '\a', '\x35', '\x2', 
+		'\x2', '\xD3', '\xD5', '\a', '@', '\x2', '\x2', '\xD4', '\xD3', '\x3', 
+		'\x2', '\x2', '\x2', '\xD4', '\xD5', '\x3', '\x2', '\x2', '\x2', '\xD5', 
+		'\xD6', '\x3', '\x2', '\x2', '\x2', '\xD6', '\xD8', '\a', '\x36', '\x2', 
+		'\x2', '\xD7', '\xB3', '\x3', '\x2', '\x2', '\x2', '\xD7', '\xB6', '\x3', 
+		'\x2', '\x2', '\x2', '\xD7', '\xB8', '\x3', '\x2', '\x2', '\x2', '\xD7', 
+		'\xB9', '\x3', '\x2', '\x2', '\x2', '\xD7', '\xBA', '\x3', '\x2', '\x2', 
+		'\x2', '\xD7', '\xBB', '\x3', '\x2', '\x2', '\x2', '\xD7', '\xBF', '\x3', 
+		'\x2', '\x2', '\x2', '\xD7', '\xC3', '\x3', '\x2', '\x2', '\x2', '\xD7', 
+		'\xC7', '\x3', '\x2', '\x2', '\x2', '\xD7', '\xCB', '\x3', '\x2', '\x2', 
+		'\x2', '\xD7', '\xD1', '\x3', '\x2', '\x2', '\x2', '\xD8', '\xF9', '\x3', 
+		'\x2', '\x2', '\x2', '\xD9', '\xDA', '\f', '\x14', '\x2', '\x2', '\xDA', 
+		'\xDB', '\a', '\x3', '\x2', '\x2', '\xDB', '\xF8', '\x5', '\x1E', '\x10', 
+		'\x14', '\xDC', '\xDD', '\f', '\x13', '\x2', '\x2', '\xDD', '\xDE', '\t', 
+		'\x2', '\x2', '\x2', '\xDE', '\xF8', '\x5', '\x1E', '\x10', '\x14', '\xDF', 
+		'\xE0', '\f', '\x12', '\x2', '\x2', '\xE0', '\xE1', '\t', '\x3', '\x2', 
+		'\x2', '\xE1', '\xF8', '\x5', '\x1E', '\x10', '\x13', '\xE2', '\xE3', 
+		'\f', '\x11', '\x2', '\x2', '\xE3', '\xE4', '\t', '\x4', '\x2', '\x2', 
+		'\xE4', '\xF8', '\x5', '\x1E', '\x10', '\x12', '\xE5', '\xE6', '\f', '\x10', 
+		'\x2', '\x2', '\xE6', '\xE7', '\t', '\x5', '\x2', '\x2', '\xE7', '\xF8', 
+		'\x5', '\x1E', '\x10', '\x11', '\xE8', '\xE9', '\f', '\xF', '\x2', '\x2', 
+		'\xE9', '\xEA', '\a', '$', '\x2', '\x2', '\xEA', '\xF8', '\x5', '\x1E', 
+		'\x10', '\x10', '\xEB', '\xEC', '\f', '\xE', '\x2', '\x2', '\xEC', '\xED', 
+		'\a', '#', '\x2', '\x2', '\xED', '\xF8', '\x5', '\x1E', '\x10', '\xF', 
+		'\xEE', '\xEF', '\f', '\r', '\x2', '\x2', '\xEF', '\xF0', '\a', ':', '\x2', 
+		'\x2', '\xF0', '\xF1', '\x5', '\x1E', '\x10', '\x2', '\xF1', '\xF2', '\a', 
+		';', '\x2', '\x2', '\xF2', '\xF3', '\x5', '\x1E', '\x10', '\xE', '\xF3', 
+		'\xF8', '\x3', '\x2', '\x2', '\x2', '\xF4', '\xF5', '\f', '\f', '\x2', 
+		'\x2', '\xF5', '\xF6', '\a', '\x12', '\x2', '\x2', '\xF6', '\xF8', '\x5', 
+		'\x1E', '\x10', '\r', '\xF7', '\xD9', '\x3', '\x2', '\x2', '\x2', '\xF7', 
+		'\xDC', '\x3', '\x2', '\x2', '\x2', '\xF7', '\xDF', '\x3', '\x2', '\x2', 
+		'\x2', '\xF7', '\xE2', '\x3', '\x2', '\x2', '\x2', '\xF7', '\xE5', '\x3', 
+		'\x2', '\x2', '\x2', '\xF7', '\xE8', '\x3', '\x2', '\x2', '\x2', '\xF7', 
+		'\xEB', '\x3', '\x2', '\x2', '\x2', '\xF7', '\xEE', '\x3', '\x2', '\x2', 
+		'\x2', '\xF7', '\xF4', '\x3', '\x2', '\x2', '\x2', '\xF8', '\xFB', '\x3', 
+		'\x2', '\x2', '\x2', '\xF9', '\xF7', '\x3', '\x2', '\x2', '\x2', '\xF9', 
+		'\xFA', '\x3', '\x2', '\x2', '\x2', '\xFA', '\x1F', '\x3', '\x2', '\x2', 
+		'\x2', '\xFB', '\xF9', '\x3', '\x2', '\x2', '\x2', '\xFC', '\xFE', '\a', 
+		'\x33', '\x2', '\x2', '\xFD', '\xFF', '\x5', '\x1C', '\xF', '\x2', '\xFE', 
+		'\xFD', '\x3', '\x2', '\x2', '\x2', '\xFE', '\xFF', '\x3', '\x2', '\x2', 
+		'\x2', '\xFF', '\x100', '\x3', '\x2', '\x2', '\x2', '\x100', '\x101', 
+		'\a', '\x34', '\x2', '\x2', '\x101', '!', '\x3', '\x2', '\x2', '\x2', 
+		'\x102', '\x103', '\a', '\x33', '\x2', '\x2', '\x103', '\x104', '\x5', 
+		'\x1E', '\x10', '\x2', '\x104', '\x105', '\a', '\x34', '\x2', '\x2', '\x105', 
+		'\x107', '\x3', '\x2', '\x2', '\x2', '\x106', '\x102', '\x3', '\x2', '\x2', 
+		'\x2', '\x107', '\x108', '\x3', '\x2', '\x2', '\x2', '\x108', '\x106', 
+		'\x3', '\x2', '\x2', '\x2', '\x108', '\x109', '\x3', '\x2', '\x2', '\x2', 
+		'\x109', '#', '\x3', '\x2', '\x2', '\x2', '\x1C', '&', ',', '.', '\x35', 
+		'@', '\x44', 'L', 'R', 'X', 'j', 'p', 't', '\x8C', '\xA8', '\xB0', '\xBD', 
+		'\xC1', '\xC5', '\xC9', '\xCF', '\xD4', '\xD7', '\xF7', '\xF9', '\xFE', 
+		'\x108',
 	};
 
 	public static readonly ATN _ATN =

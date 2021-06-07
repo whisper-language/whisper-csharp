@@ -27,8 +27,8 @@ namespace whisper_language
             try
             {
                 var a = CharStreams.fromPath("case/main.whl");
-                var lexer = new TLLexer(a);
-                TLParser parser = new TLParser(new CommonTokenStream(lexer));
+                var lexer = new WhisperLanguageLexer(a);
+                WhisperLanguageParser parser = new WhisperLanguageParser(new CommonTokenStream(lexer));
                 parser.BuildParseTree = true;
                 var tree = parser.parse();
                 Scope scope = new Scope(null, false);

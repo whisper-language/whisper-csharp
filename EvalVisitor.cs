@@ -10,7 +10,7 @@ using whisper_language.gen;
 
 namespace whisper_language
 {
-    class EvalVisitor : TLBaseVisitor<TLValue>
+    class EvalVisitor : WhisperLanguageBaseVisitor<TLValue>
     {
         private static ReturnValue returnValue = new ReturnValue();
 
@@ -27,7 +27,8 @@ namespace whisper_language
             this.buildInfunction = buildInfunction;
         }
 
-        override public TLValue VisitFunctionDecl(TLParser.FunctionDeclContext ctx)
+
+        override public TLValue VisitFunctionDecl(WhisperLanguageParser.FunctionDeclContext ctx)
         {
             ITerminalNode[] emptyList = { };
             List<ITerminalNode> param = (ctx.idList() != null ? ctx.idList().Identifier() : emptyList).ToList();
@@ -38,13 +39,13 @@ namespace whisper_language
         }
 
         override
-       public TLValue VisitList(TLParser.ListContext ctx)
+       public TLValue VisitList_Alias(WhisperLanguageParser.List_AliasContext ctx)
         {
             List<TLValue> list = new List<TLValue>();
             if (ctx.exprList() != null)
             {
 
-                foreach (TLParser.ExpressionContext ex in ctx.exprList().expression())
+                foreach (WhisperLanguageParser.ExpressionContext ex in ctx.exprList().expression())
                 {
                     list.Add(this.Visit(ex));
                 }
@@ -55,7 +56,7 @@ namespace whisper_language
 
         // '-' expression                           #unaryMinusExpression
         override
-       public TLValue VisitUnaryMinusExpression(TLParser.UnaryMinusExpressionContext ctx)
+       public TLValue VisitUnaryMinusExpression(WhisperLanguageParser.UnaryMinusExpressionContext ctx)
         {
             TLValue v = this.Visit(ctx.expression());
             if (!v.IsNumber())
@@ -67,7 +68,7 @@ namespace whisper_language
 
         // '!' expression                           #notExpression
         override
-       public TLValue VisitNotExpression(TLParser.NotExpressionContext ctx)
+       public TLValue VisitNotExpression(WhisperLanguageParser.NotExpressionContext ctx)
         {
             TLValue v = this.Visit(ctx.expression());
             if (!v.IsBoolean())
@@ -79,7 +80,7 @@ namespace whisper_language
 
         // expression '^' expression                #powerExpression
         override
-       public TLValue VisitPowerExpression(TLParser.PowerExpressionContext ctx)
+       public TLValue VisitPowerExpression(WhisperLanguageParser.PowerExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -92,15 +93,15 @@ namespace whisper_language
 
         // expression op=( '*' | '/' | '%' ) expression         #multExpression
         override
-       public TLValue VisitMultExpression(TLParser.MultExpressionContext ctx)
+       public TLValue VisitMultExpression(WhisperLanguageParser.MultExpressionContext ctx)
         {
             switch (ctx.op.Type)
             {
-                case TLLexer.Multiply:
+                case WhisperLanguageLexer.Multiply:
                     return multiply(ctx);
-                case TLLexer.Divide:
+                case WhisperLanguageLexer.Divide:
                     return divide(ctx);
-                case TLLexer.Modulus:
+                case WhisperLanguageLexer.Modulus:
                     return modulus(ctx);
                 default:
                     throw new Exception("错误的操作符: " + ctx.op.Type);
@@ -109,13 +110,13 @@ namespace whisper_language
 
         // expression op=( '+' | '-' ) expression               #addExpression
         override
-       public TLValue VisitAddExpression(TLParser.AddExpressionContext ctx)
+       public TLValue VisitAddExpression(WhisperLanguageParser.AddExpressionContext ctx)
         {
             switch (ctx.op.Type)
             {
-                case TLLexer.Add:
+                case WhisperLanguageLexer.Add:
                     return add(ctx);
-                case TLLexer.Subtract:
+                case WhisperLanguageLexer.Subtract:
                     return subtract(ctx);
                 default:
                     throw new Exception("错误的操作符: " + ctx.op.Type);
@@ -124,17 +125,17 @@ namespace whisper_language
 
         // expression op=( '>=' | '<=' | '>' | '<' ) expression #compExpression
         override
-       public TLValue VisitCompExpression(TLParser.CompExpressionContext ctx)
+       public TLValue VisitCompExpression(WhisperLanguageParser.CompExpressionContext ctx)
         {
             switch (ctx.op.Type)
             {
-                case TLLexer.LT:
+                case WhisperLanguageLexer.LT:
                     return lt(ctx);
-                case TLLexer.LTEquals:
+                case WhisperLanguageLexer.LTEquals:
                     return ltEq(ctx);
-                case TLLexer.GT:
+                case WhisperLanguageLexer.GT:
                     return gt(ctx);
-                case TLLexer.GTEquals:
+                case WhisperLanguageLexer.GTEquals:
                     return gtEq(ctx);
                 default:
                     throw new Exception("错误的操作符: " + ctx.op.Type);
@@ -143,20 +144,20 @@ namespace whisper_language
 
         // expression op=( '==' | '!=' ) expression             #eqExpression
         override
-       public TLValue VisitEqExpression(TLParser.EqExpressionContext ctx)
+       public TLValue VisitEqExpression(WhisperLanguageParser.EqExpressionContext ctx)
         {
             switch (ctx.op.Type)
             {
-                case TLLexer.Equals:
+                case WhisperLanguageLexer.Equals:
                     return eq(ctx);
-                case TLLexer.NEquals:
+                case WhisperLanguageLexer.NEquals:
                     return nEq(ctx);
                 default:
                     throw new Exception("错误的操作符: " + ctx.op.Type);
             }
         }
 
-        public TLValue multiply(TLParser.MultExpressionContext ctx)
+        public TLValue multiply(WhisperLanguageParser.MultExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -199,7 +200,7 @@ namespace whisper_language
             throw new EvalException(ctx);
         }
 
-        private TLValue divide(TLParser.MultExpressionContext ctx)
+        private TLValue divide(WhisperLanguageParser.MultExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -210,7 +211,7 @@ namespace whisper_language
             throw new EvalException(ctx);
         }
 
-        private TLValue modulus(TLParser.MultExpressionContext ctx)
+        private TLValue modulus(WhisperLanguageParser.MultExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -221,7 +222,7 @@ namespace whisper_language
             throw new EvalException(ctx);
         }
 
-        private TLValue add(TLParser.AddExpressionContext ctx)
+        private TLValue add(WhisperLanguageParser.AddExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -260,7 +261,7 @@ namespace whisper_language
             return new TLValue(lhs.ToString() + rhs.ToString());
         }
 
-        private TLValue subtract(TLParser.AddExpressionContext ctx)
+        private TLValue subtract(WhisperLanguageParser.AddExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -277,7 +278,7 @@ namespace whisper_language
             throw new EvalException(ctx);
         }
 
-        private TLValue gtEq(TLParser.CompExpressionContext ctx)
+        private TLValue gtEq(WhisperLanguageParser.CompExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -292,7 +293,7 @@ namespace whisper_language
             throw new EvalException(ctx);
         }
 
-        private TLValue ltEq(TLParser.CompExpressionContext ctx)
+        private TLValue ltEq(WhisperLanguageParser.CompExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -307,7 +308,7 @@ namespace whisper_language
             throw new EvalException(ctx);
         }
 
-        private TLValue gt(TLParser.CompExpressionContext ctx)
+        private TLValue gt(WhisperLanguageParser.CompExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -322,7 +323,7 @@ namespace whisper_language
             throw new EvalException(ctx);
         }
 
-        private TLValue lt(TLParser.CompExpressionContext ctx)
+        private TLValue lt(WhisperLanguageParser.CompExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -337,7 +338,7 @@ namespace whisper_language
             throw new EvalException(ctx);
         }
 
-        private TLValue eq(TLParser.EqExpressionContext ctx)
+        private TLValue eq(WhisperLanguageParser.EqExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -348,7 +349,7 @@ namespace whisper_language
             return new TLValue(lhs.Equals(rhs));
         }
 
-        private TLValue nEq(TLParser.EqExpressionContext ctx)
+        private TLValue nEq(WhisperLanguageParser.EqExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -357,7 +358,7 @@ namespace whisper_language
 
         // expression '&&' expression               #andExpression
         override
-       public TLValue VisitAndExpression(TLParser.AndExpressionContext ctx)
+       public TLValue VisitAndExpression(WhisperLanguageParser.AndExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -371,7 +372,7 @@ namespace whisper_language
 
         // expression '||' expression               #orExpression
         override
-       public TLValue VisitOrExpression(TLParser.OrExpressionContext ctx)
+       public TLValue VisitOrExpression(WhisperLanguageParser.OrExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -385,7 +386,7 @@ namespace whisper_language
 
         // expression '?' expression ':' expression #ternaryExpression
         override
-       public TLValue VisitTernaryExpression(TLParser.TernaryExpressionContext ctx)
+       public TLValue VisitTernaryExpression(WhisperLanguageParser.TernaryExpressionContext ctx)
         {
             TLValue condition = this.Visit(ctx.expression(0));
             if (condition.asBoolean())
@@ -400,7 +401,7 @@ namespace whisper_language
 
         // expression In expression                 #inExpression
         override
-       public TLValue VisitInExpression(TLParser.InExpressionContext ctx)
+       public TLValue VisitInExpression(WhisperLanguageParser.InExpressionContext ctx)
         {
             TLValue lhs = this.Visit(ctx.expression(0));
             TLValue rhs = this.Visit(ctx.expression(1));
@@ -421,7 +422,7 @@ namespace whisper_language
 
         // Number                                   #numberExpression
         override
-       public TLValue VisitNumberExpression(TLParser.NumberExpressionContext ctx)
+       public TLValue VisitNumberExpression(WhisperLanguageParser.NumberExpressionContext ctx)
         {
 
             return new TLValue(Double.Parse(ctx.GetText()));
@@ -429,21 +430,21 @@ namespace whisper_language
 
         // Bool                                     #boolExpression
         override
-       public TLValue VisitBoolExpression(TLParser.BoolExpressionContext ctx)
+       public TLValue VisitBoolExpression(WhisperLanguageParser.BoolExpressionContext ctx)
         {
             return new TLValue(Boolean.Parse(ctx.GetText()));
         }
 
         // Null                                     #nullExpression
         override
-       public TLValue VisitNullExpression(TLParser.NullExpressionContext ctx)
+       public TLValue VisitNullExpression(WhisperLanguageParser.NullExpressionContext ctx)
         {
             return TLValue.NULL;
         }
 
-        private TLValue resolveIndexes(TLValue val, List<TLParser.ExpressionContext> indexes)
+        private TLValue resolveIndexes(TLValue val, List<WhisperLanguageParser.ExpressionContext> indexes)
         {
-            foreach (TLParser.ExpressionContext ec in indexes)
+            foreach (WhisperLanguageParser.ExpressionContext ec in indexes)
             {
                 TLValue idx = this.Visit(ec);
                 if (!idx.IsNumber() || (!val.isList() && !val.IsString()))
@@ -464,7 +465,7 @@ namespace whisper_language
             return val;
         }
 
-        private void setAtIndex(ParserRuleContext ctx, List<TLParser.ExpressionContext> indexes, TLValue val, TLValue newVal)
+        private void setAtIndex(ParserRuleContext ctx, List<WhisperLanguageParser.ExpressionContext> indexes, TLValue val, TLValue newVal)
         {
             if (!val.isList())
             {
@@ -489,14 +490,14 @@ namespace whisper_language
         }
 
         // functionCall indexes?                    #functionCallExpression
-        override public TLValue VisitFunctionCallExpression(TLParser.FunctionCallExpressionContext ctx)
+        override public TLValue VisitFunctionCallExpression(WhisperLanguageParser.FunctionCallExpressionContext ctx)
         {
 
 
             TLValue val = this.Visit(ctx.functionCall());
             if (ctx.indexes() != null)
             {
-                List<TLParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
+                List<WhisperLanguageParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
                 val = resolveIndexes(val, exps);
             }
             return val;
@@ -504,12 +505,12 @@ namespace whisper_language
 
         // list indexes?                            #listExpression
         override
-       public TLValue VisitListExpression(TLParser.ListExpressionContext ctx)
+       public TLValue VisitListExpression(WhisperLanguageParser.ListExpressionContext ctx)
         {
-            TLValue val = this.Visit(ctx.list());
+            TLValue val = this.Visit(ctx.list_Alias());
             if (ctx.indexes() != null)
             {
-                List<TLParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
+                List<WhisperLanguageParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
                 val = resolveIndexes(val, exps);
             }
             return val;
@@ -517,14 +518,14 @@ namespace whisper_language
 
         // Identifier indexes?                      #identifierExpression
         override
-       public TLValue VisitIdentifierExpression(TLParser.IdentifierExpressionContext ctx)
+       public TLValue VisitIdentifierExpression(WhisperLanguageParser.IdentifierExpressionContext ctx)
         {
             String id = ctx.Identifier().GetText();
             TLValue val = scope.resolve(id);
 
             if (ctx.indexes() != null)
             {
-                List<TLParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
+                List<WhisperLanguageParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
                 val = resolveIndexes(val, exps);
             }
             return val;
@@ -532,7 +533,7 @@ namespace whisper_language
 
         // String indexes?                          #stringExpression
         override
-       public TLValue VisitStringExpression(TLParser.StringExpressionContext ctx)
+       public TLValue VisitStringExpression(WhisperLanguageParser.StringExpressionContext ctx)
         {
             String text = ctx.GetText();
             //TODO 转义字符的处理
@@ -542,7 +543,7 @@ namespace whisper_language
             TLValue val = new TLValue(text);
             if (ctx.indexes() != null)
             {
-                List<TLParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
+                List<WhisperLanguageParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
                 val = resolveIndexes(val, exps);
             }
             return val;
@@ -550,12 +551,12 @@ namespace whisper_language
 
         // '(' expression ')' indexes?              #expressionExpression
         override
-       public TLValue VisitExpressionExpression(TLParser.ExpressionExpressionContext ctx)
+       public TLValue VisitExpressionExpression(WhisperLanguageParser.ExpressionExpressionContext ctx)
         {
             TLValue val = this.Visit(ctx.expression());
             if (ctx.indexes() != null)
             {
-                List<TLParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
+                List<WhisperLanguageParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
                 val = resolveIndexes(val, exps);
             }
             return val;
@@ -563,7 +564,7 @@ namespace whisper_language
 
         // Input '(' String? ')'                    #inputExpression
         override
-           public TLValue VisitInputExpression(TLParser.InputExpressionContext ctx)
+           public TLValue VisitInputExpression(WhisperLanguageParser.InputExpressionContext ctx)
         {
             throw new Exception("未实现");
         }
@@ -573,13 +574,13 @@ namespace whisper_language
         // : Identifier indexes? '=' expression
         // ;
         override
-       public TLValue VisitAssignment(TLParser.AssignmentContext ctx)
+       public TLValue VisitAssignment(WhisperLanguageParser.AssignmentContext ctx)
         {
             TLValue newVal = this.Visit(ctx.expression());
             if (ctx.indexes() != null)
             {
                 TLValue val = scope.resolve(ctx.Identifier().GetText());
-                List<TLParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
+                List<WhisperLanguageParser.ExpressionContext> exps = ctx.indexes().expression().ToList();
                 setAtIndex(ctx, exps, val, newVal);
             }
             else
@@ -591,15 +592,15 @@ namespace whisper_language
         }
 
         override
-       public TLValue VisitBuildInIdentifierFunctionCall(TLParser.BuildInIdentifierFunctionCallContext ctx)
+       public TLValue VisitBuildInIdentifierFunctionCall(WhisperLanguageParser.BuildInIdentifierFunctionCallContext ctx)
         {
-            List<TLParser.ExpressionContext> param = ctx.exprList() != null ? ctx.exprList().expression().ToList() : new List<TLParser.ExpressionContext>();
+            List<WhisperLanguageParser.ExpressionContext> param = ctx.exprList() != null ? ctx.exprList().expression().ToList() : new List<WhisperLanguageParser.ExpressionContext>();
             String id = ctx.BuildIdentifier().GetText();
             BuildInFunction function;
             if ((function = buildInfunction[id]) != null)
             {
                 List<TLValue> args = new List<TLValue>(param.Count);
-                foreach (TLParser.ExpressionContext param1 in param)
+                foreach (WhisperLanguageParser.ExpressionContext param1 in param)
                 {
                     args.Add(this.Visit(param1));
                 }
@@ -610,17 +611,17 @@ namespace whisper_language
 
         // Identifier '(' exprList? ')' #identifierFunctionCall
         override
-       public TLValue VisitIdentifierFunctionCall(TLParser.IdentifierFunctionCallContext ctx)
+       public TLValue VisitIdentifierFunctionCall(WhisperLanguageParser.IdentifierFunctionCallContext ctx)
         {
 
-            List<TLParser.ExpressionContext> param = ctx.exprList() != null ? ctx.exprList().expression().ToList() : new List<TLParser.ExpressionContext>();
+            List<WhisperLanguageParser.ExpressionContext> param = ctx.exprList() != null ? ctx.exprList().expression().ToList() : new List<WhisperLanguageParser.ExpressionContext>();
             String id = ctx.Identifier().GetText() + param.Count();
             Function function;
 
             if ((function = functions[id]) != null)
             {
                 List<TLValue> args = new List<TLValue>(param.Count());
-                foreach (TLParser.ExpressionContext param1 in param)
+                foreach (WhisperLanguageParser.ExpressionContext param1 in param)
                 {
                     args.Add(this.Visit(param1));
                 }
@@ -635,7 +636,7 @@ namespace whisper_language
 
         // Println '(' expression? ')'  #printlnFunctionCall
         override
-       public TLValue VisitPrintlnFunctionCall(TLParser.PrintlnFunctionCallContext ctx)
+       public TLValue VisitPrintlnFunctionCall(WhisperLanguageParser.PrintlnFunctionCallContext ctx)
         {
             if (ctx.expression() != null)
             {
@@ -650,14 +651,14 @@ namespace whisper_language
 
         // Print '(' expression ')'     #printFunctionCall
         override
-       public TLValue VisitPrintFunctionCall(TLParser.PrintFunctionCallContext ctx)
+       public TLValue VisitPrintFunctionCall(WhisperLanguageParser.PrintFunctionCallContext ctx)
         {
             return TLValue.VOID;
         }
 
         // Assert '(' expression ')'    #assertFunctionCall
         override
-       public TLValue VisitAssertFunctionCall(TLParser.AssertFunctionCallContext ctx)
+       public TLValue VisitAssertFunctionCall(WhisperLanguageParser.AssertFunctionCallContext ctx)
         {
             TLValue value = this.Visit(ctx.expression());
 
@@ -680,7 +681,7 @@ namespace whisper_language
 
         // Size '(' expression ')'      #sizeFunctionCall
         override
-       public TLValue VisitSizeFunctionCall(TLParser.SizeFunctionCallContext ctx)
+       public TLValue VisitSizeFunctionCall(WhisperLanguageParser.SizeFunctionCallContext ctx)
         {
             TLValue value = this.Visit(ctx.expression());
 
@@ -713,7 +714,7 @@ namespace whisper_language
         //  : Else Do block
         //  ;
         override
-       public TLValue VisitIfStatement(TLParser.IfStatementContext ctx)
+       public TLValue VisitIfStatement(WhisperLanguageParser.IfStatementContext ctx)
         {
 
             // if ...
@@ -744,19 +745,19 @@ namespace whisper_language
         // : (statement | functionDecl)* (Return expression)?
         // ;
         override
-       public TLValue VisitBlock(TLParser.BlockContext ctx)
+       public TLValue VisitBlock(WhisperLanguageParser.BlockContext ctx)
         {
 
             scope = new Scope(scope, false); // create new local scope
-            foreach (TLParser.FunctionDeclContext fdx in ctx.functionDecl())
+            foreach (WhisperLanguageParser.FunctionDeclContext fdx in ctx.functionDecl())
             {
                 this.Visit(fdx);
             }
-            foreach (TLParser.StatementContext sx in ctx.statement())
+            foreach (WhisperLanguageParser.StatementContext sx in ctx.statement())
             {
                 this.Visit(sx);
             }
-            TLParser.ExpressionContext ex;
+            WhisperLanguageParser.ExpressionContext ex;
             if ((ex = ctx.expression()) != null)
             {
                 returnValue.value = this.Visit(ex);
@@ -771,7 +772,7 @@ namespace whisper_language
         // : For Identifier '=' expression To expression OBrace block CBrace
         // ;
         override
-       public TLValue VisitForStatement(TLParser.ForStatementContext ctx)
+       public TLValue VisitForStatement(WhisperLanguageParser.ForStatementContext ctx)
         {
             int start = this.Visit(ctx.expression(0)).asInt();
             int stop = this.Visit(ctx.expression(1)).asInt();
@@ -791,7 +792,7 @@ namespace whisper_language
         // : While expression OBrace block CBrace
         // ;
         override
-       public TLValue VisitWhileStatement(TLParser.WhileStatementContext ctx)
+       public TLValue VisitWhileStatement(WhisperLanguageParser.WhileStatementContext ctx)
         {
             while (this.Visit(ctx.expression()).asBoolean())
             {
